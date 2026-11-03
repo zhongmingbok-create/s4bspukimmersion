@@ -1,0 +1,668 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>BSP UK Immersion 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a London street-poster home of bright tiles, each opening one section on its own. Deliberately a single bright look in every theme. */
+:root{
+  color-scheme:light;
+  --royal:#012169; --royal2:#0a2f86; --royal3:#1b47a6; --red:#c8102e; --tube:#dc241f; --yellow:#ffd329; --sky:#35b8ee;
+  --purple:#6950a1; --green:#00782a; --pink:#f7b3c8; --black:#14141a; --white:#fff; --paper:#f2f5fb; --ink:#0c1a44; --muted:#4c5878; --rule:#d5dbe9;
+  --orange:#e8710a; --teal:#007d8a; --gold:#f5b700;
+  --display:"Abril Fatface","Songti SC","Noto Serif SC",Georgia,serif;
+  --body:"Cabin","Gill Sans","Trebuchet MS",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--royal);color:var(--ink);font:400 16px/1.55 var(--body)}
+body.inner{background:var(--paper)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--royal)}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:.005em}
+a{color:inherit;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+mark{background:var(--yellow);color:var(--ink);padding:0 .18em;border-radius:2px}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* ===== HOME ===== */
+.hero{position:relative;overflow:hidden;background:var(--royal);color:var(--white)}
+.jack{position:absolute;inset:0;opacity:.09;pointer-events:none;background:
+  linear-gradient(90deg,transparent 46%,#fff 46%,#fff 54%,transparent 54%),
+  linear-gradient(0deg,transparent 42%,#fff 42%,#fff 58%,transparent 58%),
+  linear-gradient(26deg,transparent 48%,#fff 48%,#fff 52%,transparent 52%),
+  linear-gradient(-26deg,transparent 48%,#fff 48%,#fff 52%,transparent 52%)}
+.hero-text{position:relative;padding-block:34px 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start}
+.hero h1{font-size:clamp(2.7rem,8.5vw,5.6rem);line-height:1.02;margin-top:8px}
+.hero h1 span{color:var(--yellow)}
+.hero .sub{margin:12px 0 0;font-size:clamp(1rem,2.4vw,1.25rem);font-weight:500}
+.flag{width:clamp(74px,12vw,132px);height:auto;transform-origin:left center;animation:wave 2.6s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+@keyframes wave{0%,100%{transform:perspective(420px) rotateY(0) skewY(0)}50%{transform:perspective(420px) rotateY(-16deg) skewY(2.5deg)}}
+.strip{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-bottom:6px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-weight:700;padding:5px 13px;border-radius:99px;background:rgba(255,255,255,.14);text-decoration:none;font-variant-numeric:tabular-nums}
+.badge.hot{background:var(--yellow);color:var(--ink)}
+a.badge.hot:hover{background:var(--white)}
+.scenebox{--h:clamp(150px,27vw,320px);position:relative;height:var(--h);overflow:hidden;margin-top:-4px}
+.stage{position:absolute;bottom:0;left:50%;width:max(100%,calc(var(--h)*3.53));aspect-ratio:1200/340;transform:translateX(-50%)}
+.lay{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sprite{position:absolute;display:block;will-change:transform}
+.cl1,.cl2{width:10%;left:0;animation:drift 46s linear infinite}
+.cl1{top:4%}.cl2{top:22%;width:7.5%;opacity:.7;animation-duration:70s;animation-delay:-30s}
+.cl svg,svg.cl{display:block;width:100%}
+@keyframes drift{from{transform:translateX(-120%)}to{transform:translateX(1100%)}}
+.eye{left:60.83%;top:5.88%;width:21.67%;animation:spin 60s linear infinite}
+.hub{left:70.42%;top:39.7%;width:2.5%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bus{left:0;bottom:7.6%;width:15.83%;animation:busgo 17s linear infinite}
+@keyframes busgo{from{transform:translateX(-110%)}to{transform:translateX(650%)}}
+.cab{left:0;bottom:8.8%;width:10.67%;animation:cabgo 12s linear infinite;animation-delay:-5s}
+@keyframes cabgo{from{transform:translateX(960%)}to{transform:translateX(-120%)}}
+.wheel{transform-box:fill-box;transform-origin:center;animation:spin .9s linear infinite}
+.dashes{position:absolute;left:0;bottom:7%;height:4px;width:calc(100% + 60px);background:repeating-linear-gradient(90deg,#ffd329 0 34px,transparent 34px 60px);animation:dash 1.1s linear infinite;will-change:transform}
+@keyframes dash{to{transform:translateX(-60px)}}
+
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-block:22px 44px}
+.tile{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:178px;padding:16px;text-decoration:none;border-radius:6px;transition:transform .22s cubic-bezier(.2,1.5,.4,1),box-shadow .22s;animation:pop .55s cubic-bezier(.2,1.4,.4,1) backwards;animation-delay:calc(var(--i)*65ms)}
+@keyframes pop{from{transform:translateY(22px) scale(.97)}}
+@media (hover:hover){.tile:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 14px 26px rgba(0,0,0,.4)}}
+.tile:active,.dtile:active{transform:scale(.97)}
+.noanim .tile,.noanim .stag>*,.noanim .enter{animation:none}
+.tile.w2{grid-column:span 2}
+.tile.w2 svg{height:104px}
+.tile.t-white svg{height:88px;max-width:100%}
+.tile h2{font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.12;position:relative}
+.tile p{margin:3px 0 0;font-size:.93rem;line-height:1.35;font-weight:500;position:relative}
+.tile svg{height:74px;width:auto;align-self:flex-end;overflow:visible}
+.t-white{background:var(--white);color:var(--royal)}
+.t-yellow{background:var(--yellow);color:var(--ink)}
+.t-red{background:var(--red);color:var(--white)}
+.t-sky{background:var(--sky);color:var(--ink)}
+.t-purple{background:var(--purple);color:var(--white)}
+.t-green{background:var(--green);color:var(--white)}
+.t-pink{background:var(--pink);color:var(--ink)}
+.t-black{background:var(--black);color:var(--white)}
+.minitrain{animation:mt 5s ease-in-out infinite alternate}
+@keyframes mt{from{transform:translateX(0)}to{transform:translateX(112px)}}
+.march{animation:march .7s ease-in-out infinite alternate}
+.march.m2{animation-delay:.2s}.march.m3{animation-delay:.4s}
+@keyframes march{to{transform:translateY(-5px)}}
+.plane{animation:fly 3.6s ease-in-out infinite alternate}
+@keyframes fly{from{transform:translate(-8px,6px) rotate(-3deg)}to{transform:translate(10px,-6px) rotate(3deg)}}
+.drop{animation:rain 1.1s linear infinite}
+.drop.d2{animation-delay:.35s}.drop.d3{animation-delay:.7s}
+@keyframes rain{from{transform:translateY(-10px);opacity:0}30%{opacity:1}to{transform:translateY(16px);opacity:0}}
+.coin{transform-box:fill-box;transform-origin:center;animation:coin 3s ease-in-out infinite}
+@keyframes coin{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.15)}}
+.hand{transform-box:view-box;transform-origin:40px 40px;animation:spin 8s linear infinite}
+.hand.h2{animation-duration:48s}
+.ring{animation:ring 2.6s ease-in-out infinite;transform-origin:50% 12%;transform-box:fill-box}
+@keyframes ring{0%,70%,100%{transform:rotate(0)}74%{transform:rotate(-9deg)}80%{transform:rotate(9deg)}86%{transform:rotate(-6deg)}92%{transform:rotate(5deg)}}
+.leaf{animation:leaf 2.4s ease-in-out infinite alternate;transform-origin:50% 100%;transform-box:fill-box}
+@keyframes leaf{to{transform:rotate(-8deg)}}
+
+/* ===== INNER VIEWS ===== */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--royal);color:var(--white)}
+.topbar .wrap{display:flex;align-items:center;gap:10px;padding-block:9px;min-width:0}
+.home-btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;background:var(--yellow);color:var(--ink);text-decoration:none;padding:6px 14px;border-radius:99px;white-space:nowrap;transition:transform .15s}
+.home-btn:hover{transform:translateX(-3px)}
+.topbar .where{font-family:var(--display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.vband{color:var(--fg,#fff);background:var(--bg,var(--red));padding-block:26px 24px;overflow:hidden}
+.vband .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.vband h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.08}
+.vband p{margin:6px 0 0;font-weight:500;max-width:60ch}
+.vband svg{height:clamp(64px,11vw,104px);width:auto;flex:none;overflow:visible}
+.vbody{padding-block:26px 56px;display:grid;gap:26px}
+.enter{animation:rise .42s cubic-bezier(.2,1,.4,1) backwards}
+@keyframes rise{from{transform:translateY(16px)}}
+.stag>*{animation:pop .5s cubic-bezier(.2,1.3,.4,1) backwards}
+.stag>*:nth-child(2){animation-delay:70ms}.stag>*:nth-child(3){animation-delay:140ms}.stag>*:nth-child(4){animation-delay:210ms}.stag>*:nth-child(5){animation-delay:280ms}.stag>*:nth-child(6){animation-delay:350ms}
+
+/* groups */
+.gp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gcard{border-radius:6px;overflow:hidden;background:var(--white);display:flex;flex-direction:column;min-width:0}
+.gcard header{background:var(--c);color:var(--cf,#fff);padding:16px}
+.gcard h2{font-size:1.5rem;line-height:1.15}
+.gcard ul{list-style:none;margin:0;padding:12px 16px;display:grid;gap:2px;flex:1}
+.gcard li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.05rem;padding:5px 0;border-bottom:1px solid var(--rule)}
+.gcard li:last-child{border:0}
+.gcard li svg{width:18px;height:28px;flex:none}
+.gfoot{padding:0 16px 16px;display:grid;gap:7px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-weight:700;font-size:.88rem;padding:3px 11px;border-radius:99px;background:var(--c,var(--royal));color:var(--cf,#fff);text-decoration:none;transition:transform .15s;font-variant-numeric:tabular-nums}
+.chip:hover{transform:scale(1.08)}
+
+/* days overview */
+.how{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.how div{background:var(--white);border-left:8px solid var(--yellow);padding:12px 16px;border-radius:0 6px 6px 0;min-width:0}
+.how b{font-family:var(--display);font-weight:400;font-size:1.15rem;display:block}
+.legblock{display:grid;gap:10px}
+.leghead{display:flex;align-items:center;gap:10px}
+.leghead i{width:30px;height:9px;background:var(--leg);display:block;flex:none}
+.leghead h2{font-size:1.4rem}
+.leghead small{color:var(--muted);font-size:.9rem}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}
+.dtile{display:grid;grid-template-columns:54px minmax(0,1fr);gap:12px;align-items:center;background:var(--leg);color:#fff;padding:12px;border-radius:6px;text-decoration:none;transition:transform .2s cubic-bezier(.2,1.5,.4,1),box-shadow .2s;min-width:0}
+@media (hover:hover){.dtile:hover{transform:translateY(-4px);box-shadow:0 10px 18px rgba(1,33,105,.3)}}
+.dtile.now{outline:4px solid var(--yellow);outline-offset:2px}
+.round{width:54px;height:54px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:1.3rem;border:6px solid var(--ink);font-variant-numeric:tabular-nums}
+.dtile b{display:block;font-size:.98rem}
+.dtile span.hl{display:block;font-size:.88rem;line-height:1.28;margin-top:1px}
+.dtile em{display:block;font-style:normal;font-size:.76rem;font-weight:700;letter-spacing:.04em;margin-top:4px;opacity:.92}
+
+/* route */
+.tubeline{background:var(--white);padding:30px 0 10px;border-bottom:1px solid var(--rule)}
+.tl{position:relative;list-style:none;display:grid;grid-template-columns:repeat(14,minmax(0,1fr));padding:0;margin:0}
+.tl li{position:relative;min-width:0}
+.tl li::before{content:"";position:absolute;left:0;right:0;top:12px;height:6px;background:var(--leg)}
+.tl li:first-child::before{left:50%}.tl li:last-child::before{right:50%}
+.tl a{position:relative;display:grid;justify-items:center;gap:2px;text-decoration:none;font-weight:700;font-size:.72rem}
+.tl .st{width:30px;height:30px;border-radius:50%;background:#fff;border:4px solid var(--leg);display:grid;place-items:center;font-size:.82rem;font-variant-numeric:tabular-nums;transition:transform .2s,background .2s,color .2s}
+.tl a:hover .st{transform:scale(1.15)}
+.tl .cur .st{background:var(--leg);color:#fff;transform:scale(1.18)}
+.train{position:absolute;top:-23px;left:0;width:52px;margin-left:-26px;transition:left .9s cubic-bezier(.5,0,.2,1);pointer-events:none}
+.train svg{display:block;width:100%}
+
+/* a single day */
+.daytop{background:var(--leg);color:#fff;padding-block:22px}
+.daytop .wrap{display:flex;align-items:center;gap:18px;min-width:0}
+.big-round{position:relative;width:96px;height:96px;flex:none;border-radius:50%;border:15px solid #fff;display:grid;place-items:center}
+.big-round b{position:absolute;left:-22px;right:-22px;top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;text-align:center;font-size:.98rem;padding:2px 0;letter-spacing:.02em;white-space:nowrap}
+.daytop h1{font-size:clamp(1.8rem,5.5vw,3rem);line-height:1.08}
+.daytop p{margin:4px 0 0;font-weight:600;font-size:1.05rem}
+.daypanes{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:16px;align-items:start}
+.daytabs{display:none}
+.stop-b{min-width:0}
+.about{margin-top:6px}
+.about summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;list-style:none;font-size:.86rem;font-weight:700;color:var(--ink);background:var(--yellow);padding:4px 11px;border-radius:99px;min-height:30px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.about summary::-webkit-details-marker{display:none}
+.about summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.about[open] summary{background:var(--ink);color:#fff}
+.about[open] summary::after{transform:translateY(1px) rotate(225deg)}
+.about-b{margin-top:8px;padding:12px 14px;background:var(--paper);border-radius:6px;display:grid;gap:8px;font-size:.95rem;line-height:1.45;animation:rise .25s ease}
+.about-b .kick{font-size:.82rem;color:var(--leg);font-weight:700}
+.about-b p{margin:0}
+.about-b h4{margin:2px 0 0;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--red)}
+.about-b ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.about-b li{position:relative;padding-left:18px}
+.about-b li::before{content:"";position:absolute;left:0;top:.42em;width:10px;height:10px;border-radius:50%;background:#fff;border:3px solid var(--leg)}
+.about+.about{margin-top:6px}
+.lv{background:var(--white);border:2px solid var(--yellow);border-radius:6px;padding:10px 12px;display:grid;gap:6px}
+.lv h4{margin:0;color:var(--ink)}
+.pane{border-radius:6px;padding:18px;min-width:0;display:grid;gap:13px}
+.plan{background:var(--white)}
+.pane h2{font-size:1.45rem}
+.tt{list-style:none;margin:0;padding:0;display:grid;position:relative}
+.tt>li{display:grid;grid-template-columns:5.6rem 20px minmax(0,1fr);gap:8px;position:relative;padding-bottom:13px}
+.tt>li::before{content:"";position:absolute;left:calc(5.6rem + 8px + 8px);top:6px;bottom:-6px;width:4px;background:var(--leg)}
+.tt>li:last-child::before{display:none}
+.tt time{font-size:.86rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;line-height:1.5;text-align:right}
+.tt .dot{width:14px;height:14px;margin:4px 0 0 3px;border-radius:50%;background:#fff;border:3px solid var(--leg);position:relative;z-index:1}
+.tt em{display:block;font-style:normal;font-size:.88rem;color:var(--muted);line-height:1.35;margin-top:1px}
+.tt b{font-weight:700}
+.meta{font-size:.92rem;border-top:2px solid var(--rule);padding-top:10px;display:grid;gap:3px}
+.reflect{background:var(--royal);color:#fff;border-top:10px solid var(--yellow)}
+.reflect .eyebrow{color:var(--yellow)}
+.focus{font-family:var(--display);font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.28;margin:0}
+.prompts{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.prompts li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;animation:slide .45s ease backwards;animation-delay:calc(var(--i)*90ms + 150ms)}
+@keyframes slide{from{transform:translateX(16px)}}
+.prompts li>span:first-child{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font-weight:700;font-size:.82rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:99px;border:2px solid var(--yellow);color:var(--yellow);text-decoration:none}
+.tag:hover{background:var(--yellow);color:var(--ink)}
+.grpline{background:var(--red);margin:0 -18px -18px;padding:12px 18px;border-radius:0 0 6px 6px;font-size:.95rem}
+.steps{font-size:.93rem;border-top:1px solid rgba(255,255,255,.28);padding-top:10px}
+.pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pager a{background:var(--ink);color:#fff;font-weight:700;padding:9px 16px;border-radius:99px;text-decoration:none;transition:transform .15s}
+.pager a:hover{transform:scale(1.05)}
+.pager .all{background:var(--yellow);color:var(--ink)}
+.pager .none{visibility:hidden}
+
+/* blocks */
+.k{display:grid;gap:12px}
+.kcard{background:var(--c);color:#fff;padding:18px;border-radius:6px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 18px;align-items:start;scroll-margin-top:60px}
+.kcard .num{font-family:var(--display);font-size:3.2rem;line-height:1}
+.kcard p{margin:0;font-size:1.08rem;font-weight:500}
+.kcard .chips{margin-top:9px}
+.kcard .chip{background:rgba(255,255,255,.2);color:#fff}
+.kcard.flash{animation:flash 1.3s ease}
+@keyframes flash{0%,50%{box-shadow:0 0 0 5px var(--yellow)}100%{box-shadow:0 0 0 0 transparent}}
+.tasks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.task{background:var(--white);padding:16px;border-radius:6px;border-top:8px solid var(--c);min-width:0}
+.task h3{font-size:1.25rem;margin-bottom:5px}
+.task ul{margin:0;padding-left:1.1rem;display:grid;gap:5px}
+.card{background:var(--white);border-radius:6px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0;border-top:8px solid var(--c,var(--red))}
+.card h2{font-size:1.45rem}
+.card ul{margin:0;padding-left:1.1rem;display:grid;gap:6px}
+.card p{margin:0}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:470px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.note{font-size:.9rem;color:var(--muted);margin:0}
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.rooms div{background:var(--paper);padding:10px 12px;border-radius:4px;font-weight:500}
+.rooms b{display:block;font-family:var(--display);font-weight:400;font-size:1.08rem;color:var(--red)}
+.words{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.word{font-family:var(--display);font-size:clamp(1.25rem,4vw,2.2rem);text-align:center;padding:18px 6px;border-radius:6px;color:#fff;background:var(--c)}
+.booths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.booth{background:var(--c,var(--red));color:var(--cf,#fff);padding:16px;border-radius:6px;min-width:0;overflow-wrap:anywhere}
+.booth h2{font-size:1.28rem;margin-bottom:7px}
+.booth p{margin:0;line-height:1.5}
+.packs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.layers div{padding:12px 8px;text-align:center;color:#fff;background:var(--c);border-radius:6px;font-weight:600;line-height:1.25}
+.layers b{display:block;font-family:var(--display);font-weight:400;font-size:1.15rem}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (max-width:820px){
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .tile{min-height:132px;padding:13px}.tile svg{height:54px}.tile.w2 svg{height:68px}.tile.t-white svg{height:64px}
+  .gp,.daypanes,.how,.cols,.tasks,.booths,.packs{grid-template-columns:1fr}
+  /* phone: lighter motion. Only whole-element transforms run, so scrolling stays smooth. */
+  .wheel,.minitrain,.march,.plane,.drop,.coin,.hand,.ring,.leaf{animation:none}
+  .drop{opacity:.8}
+  .tile svg{animation:bob 3.2s ease-in-out infinite;animation-delay:calc(var(--i)*-.4s);will-change:transform}
+  .flag{filter:none}
+  .tile:hover{transform:none}
+  .topbar .where{display:none}
+  .home-btn{padding:7px 14px}
+  .daytabs{display:grid;grid-template-columns:2fr 3fr;gap:6px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 50px);z-index:15;background:var(--paper);padding-block:9px;margin-bottom:-14px}
+  .daytabs button{font-weight:700;padding:9px 4px;border-radius:99px;background:var(--white);color:var(--ink);border:2px solid var(--rule);transition:background .15s,color .15s}
+  .daytabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .tabpane{display:none}.tabpane.on{display:grid;animation:rise .28s ease}
+  .vbody.day-b{padding-top:6px;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));gap:18px}
+  .pager{position:fixed;left:0;right:0;bottom:0;z-index:18;background:var(--royal);flex-wrap:nowrap;padding:9px max(12px,env(safe-area-inset-right,0px)) calc(9px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .pager a{padding:9px 13px;background:rgba(255,255,255,.16);white-space:nowrap}
+  .pager .all{background:var(--yellow)}
+  .daytop{padding-block:14px}
+  .daytop .wrap{gap:12px}
+  .daytop h1{font-size:1.55rem}
+  .daytop p{font-size:.95rem}
+  table{min-width:0}
+  thead{display:none}
+  table,tbody,tr,td{display:block}
+  tr{padding:10px 0;border-bottom:1px solid var(--rule)}
+  tr:last-child{border:0}
+  td{border:0;padding:1px 0}
+  .tubeline{padding:27px 0 7px}
+  .tl a{padding-bottom:4px}
+  .tl .st{width:23px;height:23px;border-width:3px;font-size:.66rem}
+  .tl li::before{top:9px;height:5px}
+  .train{width:40px;margin-left:-20px;top:-19px}
+  .tt>li{grid-template-columns:20px minmax(0,1fr);gap:0 8px;padding-bottom:15px}
+  .tt>li::before{left:8px}
+  .tt .dot{grid-column:1;grid-row:1;margin-left:3px}
+  .tt time{grid-column:2;grid-row:1;text-align:left;line-height:1.4}
+  .tt time:empty{display:none}
+  .tt .stop-b{grid-column:2}
+  .tt time:empty~.stop-b{grid-row:1}
+  .about-b{margin-left:-6px;margin-right:-4px}
+  .big-round{width:60px;height:60px;border-width:10px;margin-left:12px}
+  .big-round b{font-size:.74rem;left:-17px;right:-17px}
+  .hero-text{padding-top:18px;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+  .hero h1{font-size:clamp(2.1rem,10.4vw,3rem);margin-top:6px}
+  .hero .sub{margin-top:8px;font-size:.9rem}
+  .hero .long{display:none}
+  .flag{width:58px}
+  .strip{margin-top:10px;gap:6px}
+  .badge{padding:4px 11px;font-size:.88rem}
+}
+</style>
+
+<div id="app"></div>
+
+<script>
+const GROUPS = {
+  B:{short:"Bok",  teacher:"Mr Bok Zhong Ming", names:["Lyon Fwa","Chua Feng Yang","Alex Hao","Qi Pengsen","Zhou Yuanzuo"]},
+  J:{short:"Jaishree", teacher:"Ms Jaishree",   names:["Tivon Hong","Zhang Chengrui","Zhang Dinghao","Liu Jun Qi","Yang Yichen"]},
+  P:{short:"Pek",  teacher:"Ms Pek Ru Heng",    names:["Tan Hao","Nnvan Chen","Teo Rui Zhe","Xia Ruoheng"]}
+};
+const KLO = [
+  "Deepen insights into the UK's history, culture, system of governance and way of life, and the key influences on Singapore's society and governance.",
+  "Understand how the UK has shaped global politics and worldviews, particularly through its colonial past, its involvement in World War II, and its current role in international relations.",
+  "Understand the UK's economic and technological developments and learn from Singaporean and local entrepreneurs on essential qualities to thrive locally and globally.",
+  "Appreciate Britain's cultural influence as the birthplace of English literature, and how contemporary art and culture in the UK reflect a blend of tradition and modernity.",
+  "Understand the UK's educational landscape and engage with Singaporeans studying there on key skills for advanced learning, independent living and cross-cultural integration."
+];
+const ROOMS = [
+  ["Room 4",["Tan Hao","Nnvan Chen","Teo Rui Zhe"]],
+  ["Room 5",["Tivon Hong","Zhang Chengrui","Zhang Dinghao"]],
+  ["Room 6",["Liu Jun Qi","Yang Yichen","Xia Ruoheng"]],
+  ["Room 7",["Qi Pengsen","Zhou Yuanzuo","Alex Hao"]],
+  ["Room 8",["Lyon Fwa","Chua Feng Yang"]]
+];
+const MAN="Premier Inn Manchester Salford Media City", OXF="Premier Inn Oxford Cowley", LON="Premier Inn London Hammersmith (Talgarth Road)";
+const DAYS = [
+ {n:1,hl:"People's History Museum, Urban Regeneration Walk",iso:"2026-11-07",date:"Sat 7 Nov",place:"Singapore – Manchester",leg:"man",g:"B",meals:"Meals on board · <strong>Own lunch #1</strong> · Dinner",stay:MAN,
+  sched:[["0210h","SQ 302 from Singapore","Flight time 14h 25min"],["0835h","Arrive at Manchester Airport","Clear immigration, then collect your luggage (report damage, if any)"],["1030–1230h","<b>People's History Museum</b>","Includes a 1h guided tour"],["1500–1700h","<b>Urban Regeneration Walking Tour</b>"],["","Check in to your hotel"]],
+  focus:"How did <mark>ordinary people win a political voice</mark>, and how can a declining city rebuild itself?",klo:[1,3],
+  prompts:["How did ordinary citizens campaign for voting rights, better working conditions and greater social equality?","Where does the UK's democratic journey parallel or contrast with Singapore's political evolution after independence?","How did planning, investment, sustainability and adaptive reuse turn the old Manchester Docks into a thriving waterfront while preserving its heritage? Compare this with Marina Bay or the Keppel–Tanjong Pagar terminals."]},
+ {n:2,hl:'Black Country Living Museum',iso:"2026-11-08",date:"Sun 8 Nov",place:"Manchester – Dudley – Manchester",leg:"man",g:"J",meals:"Breakfast at hotel · Lunch · Dinner",stay:MAN,
+  sched:[["0730h","Coach to Dudley","About 2h+ drive"],["1000–1500h","<b>Black Country Living Museum</b>","1100h boat tour · 1230h collect fish &amp; chips · 1400h mine gas show and colliery tour"],["1500h","Return to Manchester","About 2h+ drive"]],
+  focus:"How did the <mark>Industrial Revolution</mark> make Britain a global power, and what did it cost the people who powered it?",klo:[1,2,3],
+  prompts:["How did coal mining, manufacturing and technological innovation fuel Britain's growth and transform its society?","What far-reaching effects did industrialisation have on trade, urbanisation and the British Empire?","After the colliery tour, what stayed with you about daily life as a miner?"]},
+ {n:3,hl:'IWM North, Old Trafford',iso:"2026-11-09",date:"Mon 9 Nov",place:"Manchester",leg:"man",g:"P",meals:"Breakfast at hotel · Lunch · Dinner",stay:MAN,
+  sched:[["1000–1200h","<b>Imperial War Museum North</b>","1100–1200h Documentary Challenge session"],["1230h","Lunch at Red Café"],["After lunch","<b>Old Trafford</b>: Skills Lab workshop and Manchester United Stadium Tour","All Red All Equal: equality, diversity and inclusion at Manchester United. Key themes: compassion, collaboration, advocacy"]],
+  focus:"What did <mark>war</mark> do to people's lives, and how does <mark>sport</mark> carry Britain's influence and values today?",klo:[2,3],
+  prompts:["What was the impact of World War II on Britain, Europe and Asia, including the consequences for Singapore and the wider region?","In the Documentary Challenge, how did you question and evaluate a primary source? Did it change what you thought?","How does Manchester United practise compassion, collaboration and advocacy? What does this tell you about equality, diversity and inclusion?","How does football work as a global industry and as a form of cultural diplomacy for Britain?"]},
+ {n:4,hl:'Range Rover Factory Tour',iso:"2026-11-10",date:"Tue 10 Nov",place:"Manchester – Solihull – Oxford",leg:"oxf",change:1,g:"B",meals:"Breakfast at hotel · <strong>Own lunch #2</strong> · Dinner",stay:OXF,
+  sched:[["0830h","Check out and load luggage onto coach"],["","Coach to Solihull","About 2h+ drive"],["1300–1600h","<b>Range Rover Factory Tour</b>"],["","Coach to Oxford and check in","Under 2h drive"]],
+  focus:"What keeps a British manufacturer <mark>competitive in the world</mark>?",klo:[3],
+  prompts:["Where did you see robotics, automation, AI, precision engineering and quality control working together on the production line?","How do sustainability, research and development, and global supply chains shape a modern car company?","Why does innovation matter so much for staying competitive internationally? What might this mean for Singapore?"]},
+ {n:5,hl:'Bletchley Park',iso:"2026-11-11",date:"Wed 11 Nov",place:"Oxford – Bletchley Park – Oxford",leg:"oxf",g:"J",meals:"Breakfast at hotel · Lunch · Dinner",stay:OXF,
+  sched:[["0900h","Coach to Bletchley Park","About 1.5h drive"],["1040–1520h","<b>Bletchley Park</b>: guided tour and learning session","'Interception to Intelligence: D-Day'"],["1530h","Return to Oxford","About 1h+ drive"]],
+  focus:"How do <mark>information and technology</mark> influence power, politics and global decisions, then and now?",klo:[2,3],
+  prompts:["How did mathematics, cryptography, engineering and early computing help shape the outcome of the war?","How did this work lay the foundations for modern computer science and cybersecurity?","What ethical questions surround intelligence and national security? Where would you draw the line?","What role did innovation, collaboration and problem-solving play at Bletchley, and how do they apply to global challenges today?"]},
+ {n:6,hl:'Oxford walking tour, Ashmolean',iso:"2026-11-12",date:"Thu 12 Nov",place:"Oxford",leg:"oxf",g:"P",meals:"Breakfast at hotel · <strong>Own lunch #3</strong> · Dinner",stay:OXF,
+  sched:[["0915h","Coach to Oxford city centre"],["1000–1130h","<b>Oxford walking tour</b> with Blue Badge Guide"],["1400–1500h","<b>Ashmolean Museum</b>: educational session","China gallery"]],
+  focus:"How has Oxford shaped <mark>English literature and education</mark>, and how does a British museum <mark>present Chinese civilisation</mark>?",klo:[4,5,2],
+  prompts:["How have Oxford and its writers, such as Tolkien, C.S. Lewis, Lewis Carroll and Oscar Wilde, shaped English literature?","What makes Oxford's collegiate education system distinctive?","As a bicultural student, what did you notice about how Chinese history, technology, philosophy and art are preserved, interpreted and presented in the UK?","Consider different perspectives on cultural heritage and collection practices. Whose story does a museum tell?"]},
+ {n:7,hl:'Magdalen College, Afternoon Tea with alumni',iso:"2026-11-13",date:"Fri 13 Nov",place:"Oxford",leg:"oxf",g:"B",meals:"Breakfast at hotel · Afternoon tea · Late dinner",stay:OXF,
+  sched:[["0945h","Coach to Oxford city centre"],["1100h","<b>Magdalen College</b>, University of Oxford","Led by alumni"],["1500–1700h","<b>Traditional Afternoon Tea</b> at Browns Oxford","With alumni"],["","Late dinner"],["","Pack up for tomorrow's check-out"]],
+  focus:"What does it take for a Singaporean student to <mark>thrive in the UK</mark>?",klo:[5],
+  prompts:["What should a prospective student consider when choosing a UK university and undergraduate course?","From your seniors' experiences of the collegiate system, what adaptations do Singaporean students need to make?","Which skills for advanced learning, independent living and cross-cultural integration do you most need to build?"]},
+ {n:8,hl:'Westminster Abbey, UK Parliament',iso:"2026-11-14",date:"Sat 14 Nov",place:"Oxford – London",leg:"lon",change:1,g:"J",meals:"Breakfast at hotel · <strong>Own lunch #4</strong> · Dinner",stay:LON,
+  sched:[["0740h","Check out and load luggage onto coach"],["","Coach to London","About 1.5h drive"],["0930h","Meet your Blue Badge Guide"],["1000h","<b>Westminster Abbey</b> guided tour + <b>London City Tour</b>"],["1500–1630h","<b>UK Parliament</b> guided tour at the Palace of Westminster"],["","Proceed to hotel and check in"]],
+  focus:"How do monarchy, Parliament and religion shape <mark>British identity</mark>, and what did <mark>Singapore inherit</mark> from them?",klo:[1],
+  prompts:["How have the monarchy, Parliament, religion and national identity evolved together?","How have these institutions influenced governance, law and civic life in Commonwealth countries, including Singapore?","How do historic sites remain part of contemporary British life? Give one example from today."]},
+ {n:9,hl:'Churchill War Rooms, Sustainable Architecture',iso:"2026-11-15",date:"Sun 15 Nov",place:"London",leg:"lon",g:"P",meals:"Breakfast at hotel · <strong>Own lunch #5</strong> · Dinner",stay:LON,
+  sched:[["0845h","Depart hotel","Travel via the London Underground"],["0945h","<b>Churchill War Rooms</b>: self-guided audio tour"],["1430–1630h","<b>Sustainable Architecture walking tour</b>"]],
+  focus:"How does World War II still shape Britain, and how does London <mark>balance heritage with sustainable growth</mark>?",klo:[2,3,1],
+  prompts:["How did World War II influence British culture and society? What impact does it still have on politics and economic development?","How does London balance preserving historic landmarks with innovative architecture and sustainable city planning?","Compare the Tube with Singapore's MRT on cost, efficiency and commuter comfort. Which matters most to you?"]},
+ {n:10,hl:'Poetry workshop, Old Chang Kee, British Museum',iso:"2026-11-16",date:"Mon 16 Nov",place:"London",leg:"lon",g:"B",meals:"Breakfast at hotel · Lunch · Dinner",stay:LON,
+  sched:[["0845h","Depart hotel","Travel via the London Underground"],["1015–1215h","<b>Poetry workshop</b> by Jacob Sam-La Rose"],["1230–1400h","Combined lunch with the SCGS-CHS group + <b>dialogue with the Director of Old Chang Kee UK</b>"],["","Exploration of Covent Garden"],["1515–1700h","<b>British Museum</b>: self-guided visit"]],
+  focus:"Words, business and treasures: what does each tell you about <mark>influence across borders</mark>?",klo:[4,3,2],
+  prompts:["How can poetry be a tool for education and interaction? What did the workshop change in how you write or read?","What strategies did Old Chang Kee use to expand into an overseas market? What qualities does it take to thrive abroad?","What does the British Museum's collection reveal about the UK's power and influence over the past few centuries?","Should foreign nations with the means to conserve and study cultural treasures be allowed to remove them from their original sites?"]},
+ {n:11,hl:'Natural History Museum, Thames Barrier, Hamilton',iso:"2026-11-17",date:"Tue 17 Nov",place:"London",leg:"lon",g:"J",meals:"Breakfast at hotel · <strong>Own lunch #6</strong> · Dinner",stay:LON,
+  sched:[["0915h","Coach to Natural History Museum","Under 30min drive"],["1000h","<b>Natural History Museum</b>: self-guided visit"],["1230h","Depart for Thames Barrier"],["1430–1600h","<b>Thames Barrier Information Centre</b>: educational talk"],["1930–2215h","<b>\"Hamilton\"</b> at Victoria Palace Theatre"]],
+  focus:"How does Britain <mark>protect its city</mark> and <mark>tell its stories</mark> to the public?",klo:[3,4],
+  prompts:["What does the Natural History Museum show you about how the UK educates the public through its museums?","What are the social, environmental and economic impacts of the Thames Barrier? How do its functions compare with Singapore's Marina Barrage?","How do art and history connect in Hamilton? How can music and performance make the past meaningful today?"]},
+ {n:12,hl:'Borough Market, Old Operating Theatre, Masterclass',iso:"2026-11-18",date:"Wed 18 Nov",place:"London",leg:"lon",g:"P",meals:"Breakfast at hotel · <strong>Own lunch #7</strong> · Dinner",stay:LON,
+  sched:[["0915h","Depart hotel","Travel via the London Underground"],["","Visit Borough Market"],["1230–1400h","<b>The Old Operating Theatre Museum</b>: guided tour"],["1500–1700h","<b>Musical Theatre Masterclass</b>, based on Hamilton"],["","Pack up for tomorrow's check-out"]],
+  focus:"How do we <mark>learn from and reinterpret the past</mark>, in a Victorian operating theatre and on a modern stage?",klo:[1,4],
+  prompts:["What did hospitals, medical education and public health do for quality of life? Compare Britain's medical advances with the development of Singapore's healthcare system.","What did the artefacts and surgical demonstrations let you work out about healthcare before modern surgery and anaesthesia?","How does musical theatre use performance, music, choreography and stagecraft to retell history for modern audiences?"]},
+ {n:13,hl:'Westfield, SG High Commission, departure',iso:"2026-11-19",date:"Thu 19 Nov",place:"London – Singapore",leg:"home",g:"B",meals:"Breakfast at hotel · <strong>Own lunch #8</strong> · Dinner on board",stay:"On board SQ 319",
+  sched:[["0930h","Check out and load luggage onto coach"],["1000–1300h","Westfield London (Shepherd's Bush)"],["1400–1530h","<b>Singapore High Commission</b>: dialogue session"],["1600h","Proceed to Heathrow","Submit your SG Arrival Card"],["1730h","Check in at London Heathrow"],["2035h","SQ 319 to Singapore"]],
+  focus:"Why does the UK matter to Singapore, and <mark>what is it like to be Singaporean here</mark>?",klo:[2,5,1],
+  prompts:["Why is the UK a valuable partner for Singapore? What bilateral cooperation did you hear about?","What makes maintaining cordial relations between two countries so intricate?","What experiences and challenges do Singaporeans living in the UK face? Could you see yourself living here?"]},
+ {n:14,hl:'Arrival in Singapore, whole-trip reflection',iso:"2026-11-20",date:"Fri 20 Nov",place:"Singapore",leg:"home",meals:"Meals on board",stay:"",
+  sched:[["1745h","Arrive at Singapore Changi Airport","Clear immigration, then collect your luggage (report damage, if any)"],["","Dismissal from airport"]],
+  focus:"<mark>Whole-trip reflection</mark>: what have you understood about the UK, about Singapore, and about yourself?",klo:[1,2,3,4,5],whole:1,
+  prompts:["Which UK influences on Singapore's society and governance now stand out most to you?","How has the UK shaped global politics and worldviews, through its colonial past, World War II and its role today?","What essential qualities do you need to thrive locally and globally?","Where did you see tradition and modernity blend in British art and culture?","What skills do you want to build for advanced learning, independent living and cross-cultural integration?"]}
+];
+const PLACES={
+1:[{n:"People's History Museum",k:"The national museum of democracy",i:"Set partly in an old hydraulic pumping station by the River Irwell, this museum tells how ordinary Britons fought for the vote and for workers' rights, from 1819 to today.",l:["<b>Peterloo, 1819:</b> troops charged a peaceful crowd in Manchester, killing about 18 people and injuring about 700.","<b>Thomas Paine's desk:</b> he wrote part of <i>Rights of Man</i> at it.","<b>The banners:</b> part of a collection of over 400, and you can watch conservators at work through a window.","<b>A smuggler's coffin</b> once used to move banned newspapers."]},
+{n:"Salford Quays and MediaCityUK",k:"Urban Regeneration Walking Tour",i:"Queen Victoria opened the Manchester Ship Canal in 1894, turning an inland city into a port. The docks closed in 1982 with about 3,000 jobs lost. The same waterfront now holds the BBC, theatres and homes.",l:["<b>The Plaza:</b> an open-air filming spot for <i>BBC Breakfast</i>.","<b>Detroit Bridge:</b> a railway bridge from the dock days, moved here in 1988.","<b>The Lowry:</b> an arts centre named after the Salford-born painter of these docks.","<b>The old docks themselves:</b> Docks 6 to 9 were kept and redeveloped. Docks 1 to 5 were filled in."]}],
+2:[{n:"Black Country Living Museum",k:"Open-air history, 26 acres",i:"Shops, homes and workshops have been rebuilt here so you can walk through more than 200 years of life in one of Britain's first industrial landscapes. Costumed staff bring the streets to life.",l:["<b>Boat tour, 1100h:</b> canals were how heavy goods moved. This canal also appears in <i>Peaky Blinders</i>.","<b>Fish and chips, 1230h:</b> from the museum's traditional high street shop.","<b>Mine gas show and colliery tour, 1400h:</b> go underground to see an 1850s miner's life. Boys as young as eight sat in the dark for hours opening gates.","<b>1920s cinema:</b> a period picture house that shows a short silent-era film."]}],
+3:[{n:"Imperial War Museum North",k:"A building that makes you feel unsettled",i:"Daniel Libeskind's first UK building, completed in 2002 on a wartime bomb site. It represents a globe shattered into three pieces, for conflict on land, in the air and on water.",l:["<b>The teapot story:</b> Libeskind dropped a bagged teapot from his studio window and modelled the building on the pieces.","<b>The floor:</b> the main space slopes by about eight feet, with few right angles and no natural light. Notice how that feels.","<b>The AirShard:</b> the concrete tower looks as if it leans, but it stands straight.","<b>Documentary Challenge, 1100h:</b> you will work with primary sources, so ask who made each one and why."]},
+{n:"Old Trafford",k:"The Theatre of Dreams",i:"Manchester United's home since 1910 seats nearly 75,000. Bombing in World War II almost destroyed it. Sir Bobby Charlton gave it its famous nickname.",l:["<b>Behind the scenes:</b> the changing room, the players' tunnel and the press room.","<b>The Munich Tunnel:</b> remembers the 1958 air disaster that killed members of the team.","<b>The trophies:</b> at the start of the club museum.","<b>All Red All Equal:</b> your Skills Lab workshop on equality, diversity and inclusion."]}],
+4:[{n:"Range Rover Factory, Solihull",k:"The birthplace of Land Rover and Range Rover",i:"Land Rover built its first 4x4 at Solihull in 1948. The first Range Rover prototype followed in 1967 under the codename Velar, and production began in 1970. Your 3-hour tour runs from the early stages of production to final assembly.",l:["<b>People and robots:</b> which jobs are automated, and which are still done by skilled hands?","<b>Quality checks:</b> count how many times a car is inspected along the line.","<b>Velar:</b> the aim was never luxury, but a more comfortable Land Rover. See how far the brand has moved.","<b>Supply chains:</b> ask where the parts come from."]}],
+5:[{n:"Bletchley Park",k:"Home of the wartime codebreakers",i:"This country estate was Britain's top-secret codebreaking centre in World War II. Its work helped shorten the war and laid the foundations of modern computing. Your session is 'Interception to Intelligence: D-Day'.",l:["<b>Enigma and the Bombe:</b> see Enigma machines and the working replica of the Bombe, the machine Turing and Welchman developed.","<b>Hut 8:</b> Turing's office, and how German messages were decrypted.","<b>Hut 11:</b> Bombe operators, many of them Wrens, worked round the clock. They called the room the \"Hell Hole\".","<b>The Mansion:</b> its ballroom was a film set for <i>The Imitation Game</i>.","<b>Today's date:</b> 11 November is Armistice Day in Britain, so watch for the two-minute silence at 11am."]}],
+6:[{n:"Oxford city walk",k:"With your Blue Badge Guide",i:"Oxford is a working university spread across a city, with its colleges built around quiet courtyards. Your guide will explain the collegiate system and the customs that come with it.",l:["<b>Radcliffe Camera:</b> the round, domed library at the centre of the city.","<b>Bodleian Library and Sheldonian Theatre:</b> at the heart of university life.","<b>Bridge of Sighs:</b> the covered bridge linking two parts of Hertford College.","<b>Screen and story:</b> ask where <i>Harry Potter</i> and <i>Inspector Morse</i> were filmed, and where Tolkien and Lewis walked."]},
+{n:"Ashmolean Museum",k:"Britain's first public museum",i:"It opened on 24 May 1683 to house the collection Elias Ashmole gave to the University. Today its China galleries trace over 3,000 years of Chinese civilisation.",l:["<b>Ceramics:</b> Tang and Song wares, including a celadon collection said to be unrivalled outside China.","<b>Two wooden bodhisattvas</b> from Shanxi, dating from the 10th to 13th centuries.","<b>Modern Chinese painting:</b> masters such as Qi Baishi. Do you recognise any of the styles?","<b>The Oxford plate:</b> Chinese export porcelain showing an Oxford view. East meets West on one plate.","<b>On your way in:</b> Ju Ming's <i>Taichi Arch</i> on the forecourt. Also inside the museum: Guy Fawkes' lantern."]}],
+7:[{n:"Magdalen College",k:"Say it \"MAWD-lin\"",i:"Founded in 1458 by William of Waynflete, Magdalen is known for its medieval buildings and its large grounds. Your alumni guides can show you what college life is really like.",l:["<b>Great Tower:</b> 144 feet tall. The choir sings from the top at 6am every May Morning.","<b>The Cloister:</b> built 1474 to 1480, with carved grotesques added in 1508.","<b>The Grove and Addison's Walk:</b> a deer park, and a riverside path that C.S. Lewis wrote a poem about.","<b>Famous names:</b> C.S. Lewis taught here from 1925 to 1954, and Oscar Wilde studied here."]},
+{n:"Browns Oxford",k:"Traditional afternoon tea with alumni",i:"This brasserie on Woodstock Road was once a Morris garage, a reminder of Oxford's car-making past. Afternoon tea is the setting, and the conversation with your seniors is the point.",l:["<b>The tea:</b> sandwiches, warm scones with jam and clotted cream, and small cakes.","<b>Ask your seniors:</b> what surprised them most, what they wish they had known, and what they miss about Singapore.","<b>Tip:</b> prepare your questions before you sit down."]}],
+8:[{n:"Westminster Abbey",k:"Where Britain crowns and remembers",i:"Monks first settled here around 960, and Edward the Confessor's stone abbey was finished in 1065. Monarchs have been crowned here for almost a thousand years, most recently King Charles III in 2023.",l:["<b>Coronation Chair:</b> look for initials carved by visitors and schoolboys over 200 years ago.","<b>Poets' Corner:</b> find the writers you have read in class.","<b>Tomb of the Unknown Warrior:</b> a soldier \"unknown by name or rank\", buried on 11 November 1920.","<b>Scientists' Corner:</b> Newton and Darwin.","<b>Henry VII Lady Chapel:</b> begun in 1503. Look up at the ceiling."]},
+{n:"London City Tour",k:"With your Blue Badge Guide",i:"A first look at the capital, with the landmarks that shape how Britain presents itself to the world. Ask your guide about British life, customs and culture as you go.",l:["<b>Big Ben</b> and the Elizabeth Tower.","<b>Buckingham Palace</b> and <b>St James's Park.</b>","<b>Small things:</b> street signs, red buses and how people queue."]},
+{n:"UK Parliament",k:"Palace of Westminster",i:"This is a working Parliament, and many of its traditions shaped Singapore's own system. The tour covers four spaces and takes about 90 minutes, and the route can change at short notice.",l:["<b>Westminster Hall:</b> the oldest part of the palace, begun in 1097.","<b>Central Lobby:</b> where citizens can come to meet their MP.","<b>Commons Chamber:</b> green benches. Rebuilt after bombing in World War II. Compare it with Singapore's Parliament.","<b>Lords Chamber:</b> red benches and the throne.","<b>Good to know:</b> Big Ben itself is not part of this tour."]}],
+9:[{n:"London Underground",k:"Your transport today",i:"Opened in 1863, the Tube is the world's first underground railway. Its stations also served as air raid shelters during World War II.",l:["<b>Compare with the MRT:</b> cost, cleanliness, crowding, signs and phone signal.","<b>The line map:</b> a design copied around the world.","<b>\"Mind the gap\":</b> listen out for it."]},
+{n:"Churchill War Rooms",k:"Britain's wartime bunker",i:"These underground rooms went into use on 27 August 1939, days before the war began. Churchill and his War Cabinet ran the war from here.",l:["<b>Map Room:</b> left as it was when the lights went off in 1945.","<b>Transatlantic Telephone Room:</b> disguised as a tiny toilet, for secret calls with the US President.","<b>Cabinet War Room:</b> where the War Cabinet met.","<b>Churchill Museum:</b> his letters, belongings and recorded speeches. Which words still move you?","<b>Staff stories:</b> the people who worked and slept underground."]},
+{n:"Sustainable Architecture walk",k:"Old city, green buildings",i:"London must fit new, low-carbon buildings around centuries of history. You will learn how building certification schemes such as BREEAM rate a building's environmental performance.",l:["<b>Reuse:</b> old walls kept around new interiors.","<b>Energy:</b> shading, natural ventilation and green roofs. Ask how each one saves power.","<b>History underneath:</b> London's Bloomberg office, for example, sits above a Roman temple.","<b>Compare:</b> how does this match Singapore's Green Mark and our garden-city planning?"]}],
+10:[{n:"Poetry workshop",k:"With Jacob Sam-La Rose",i:"Jacob Sam-La Rose is a London poet, educator and editor, and the author of the collection <i>Breaking Silence</i>. He has run workshops at hundreds of schools and developed spoken word programmes with the Barbican.",l:["<b>Bring:</b> your writing material.","<b>Try this:</b> write about something you have seen on this trip.","<b>Listen for:</b> how a poem sounds aloud compared with on the page."]},
+{n:"Old Chang Kee UK",k:"A Singapore brand in London",i:"The brand began in 1956 as a Hainanese curry puff stall in Singapore. It reached Covent Garden in 2018, its first site in Europe, through a joint venture with Singaporean Sandra Leong.",l:["<b>Testing first:</b> a Kentish Town pop-up sold out within four hours each day before the shop opened.","<b>Keeping the taste:</b> the curry paste was shipped to London, and staff were trained by a team from Old Chang Kee.","<b>The price:</b> a puff cost about £2.80 at launch, against S$1.50 in Singapore. Why?","<b>Ask:</b> what has been hardest about rent, staff and winning British customers?"]},
+{n:"Covent Garden",k:"London's first modern square",i:"Inigo Jones laid out the piazza from 1630. Market stalls appeared in 1654 and grew into a major fruit and vegetable market, which moved away in 1974. The old market hall reopened as shops in 1980.",l:["<b>Street performers:</b> they audition for their slots.","<b>Punch and Judy:</b> Samuel Pepys recorded a show here in 1662, the first on record in Britain.","<b>Royal Opera House:</b> on the edge of the piazza."]},
+{n:"British Museum",k:"Two million years of human history",i:"Founded by Act of Parliament in 1753, it opened in 1759. You have under two hours, so choose a few galleries. Some of its treasures are also the subject of today's debate over who should keep them.",l:["<b>Rosetta Stone:</b> the key to reading hieroglyphs. Egypt has asked for its return.","<b>Parthenon Sculptures:</b> removed by Lord Elgin. Greece formally asked for their return in 1983.","<b>Benin Bronzes:</b> looted by British forces in 1897. Nigeria has asked for their return.","<b>China and South Asia gallery:</b> see how China is presented here, compared with the Ashmolean.","<b>Great Court:</b> Norman Foster's glass roof, opened in 2000."]}],
+11:[{n:"Natural History Museum",k:"A cathedral to nature",i:"Its grand Victorian building is an exhibit in its own right. Look at the carved animals on the walls as you enter.",l:["<b>Hope the blue whale:</b> 25.2 metres long, hanging in Hintze Hall in a diving pose. She was stranded in Ireland in 1891.","<b>Wonder Bays:</b> ten star specimens around Hintze Hall.","<b>Why \"Hope\"?</b> The name is a symbol of humanity's power to shape a sustainable future. Do you agree?"]},
+{n:"Thames Barrier",k:"The gates that protect London",i:"The deadly North Sea flood of 1953 led to this barrier, opened in 1984. Its ten steel gates span 520 metres of the river. By July 2026, they had been closed 221 times to protect the city.",l:["<b>The gates:</b> hollow steel segments that rotate up from the riverbed.","<b>The future:</b> it is expected to work until about 2070. What happens as sea levels rise?","<b>Compare:</b> the Marina Barrage also holds a freshwater reservoir. What jobs does each barrier do?"]},
+{n:"\"Hamilton\", Victoria Palace Theatre",k:"An American story on a British stage",i:"Lin-Manuel Miranda's Pulitzer Prize-winning musical retells the life of US founding father Alexander Hamilton through hip-hop, R&amp;B and traditional show tunes. It opened here in December 2017. Allow 2h 45min, including the interval.",l:["<b>King George III:</b> Britain's monarch is played for laughs. How does a London audience react?","<b>The cast:</b> who plays the founding fathers, and why does that matter?","<b>The rap battles:</b> political debate set to music.","<b>On the roof:</b> a gilt statue of ballerina Anna Pavlova."]}],
+12:[{n:"Borough Market",k:"London's oldest food market",i:"Food has been traded by London Bridge since at least 1014. In 1756, local residents raised £6,000 to buy the site, and a charitable trust still runs the market today.",l:["<b>Your lunch:</b> walk the whole market once before you buy.","<b>British produce:</b> cheeses, pies and other foods you do not see in Singapore.","<b>Compare:</b> how is this different from a hawker centre?"]},
+{n:"The Old Operating Theatre Museum",k:"Surgery before anaesthetic",i:"Hidden in the roof of a church, this is the oldest surviving operating theatre in the UK. It opened in 1822 for poor women patients at St Thomas' Hospital, closed in 1862, and was rediscovered in 1957.",l:["<b>The viewing stands:</b> medical students packed in to watch.","<b>The operating table:</b> imagine surgery with no anaesthetic and no antiseptic.","<b>Herb Garret:</b> where the hospital's apothecary stored and cured herbs.","<b>Be gentle:</b> some of what you see is graphic. Tell a teacher if you need a moment."]},
+{n:"Musical Theatre Masterclass",k:"Hamilton, from the inside",i:"After last night's show, you get to try the craft yourself in a hands-on workshop based on Hamilton.",l:["<b>Performance:</b> what changes when you do it yourself?","<b>Music and choreography:</b> how do they tell the story without words?","<b>Dress:</b> be ready to move."]}],
+13:[{n:"Westfield London",k:"Last-minute shopping and lunch",i:"Opened in 2008 at Shepherd's Bush, this huge shopping centre covers 1.6 million square feet. Use the time for your last lunch and any final souvenirs.",l:["<b>Luggage:</b> check your weight before you buy more.","<b>Food:</b> restaurants and Ichiba, a Japanese food hall.","<b>Time:</b> be back on time, as the High Commission is next."]},
+{n:"Singapore High Commission",k:"Singapore's home in London",i:"The High Commission is at 9 Wilton Crescent, Belgravia, in a row of Grade II listed stucco buildings. Look for the Singapore coat of arms on the plaque outside.",l:["<b>Your questions:</b> bring the ones you posted for the Political Secretary.","<b>Listen for:</b> why the UK matters to Singapore, and what diplomats actually do each day.","<b>Dress and manners:</b> you are representing Hwa Chong and Singapore."]}]
+};
+
+
+const LEARNING={"People's History Museum": ["You will explore the history of democracy, workers' rights, social reform and the development of political participation in Britain. Through artefacts, stories and interactive exhibits, you will examine how ordinary citizens campaigned for voting rights, better working conditions and greater social equality.", "You will gain an appreciation of how political institutions and civic participation evolved, and see how the UK's democratic journey contrasts with or parallels Singapore's own political evolution post-independence."], "Salford Quays and MediaCityUK": ["You will investigate one of the UK's most successful urban regeneration projects, tracing the transformation of the former Manchester Docks from a declining industrial port into a thriving waterfront district centred on media, culture, technology and commerce. You will examine how strategic planning, investment, sustainability and adaptive reuse have revitalised the local economy while preserving historical heritage.", "You will explore how regeneration fosters economic growth, job creation and global investment. Compare these urban redevelopment strategies with Singapore's own redevelopment of areas such as Marina Bay and the Keppel-Tanjong Pagar terminals."], "Black Country Living Museum": ["You will see the Industrial Revolution's role in establishing Britain as a global economic power, and explore its far-reaching effects on trade, urbanisation and the British Empire.", "You will learn how coal mining, manufacturing and technological innovation fuelled Britain's industrial growth and transformed its society."], "Imperial War Museum North": ["You will investigate Britain's role in the Second World War through personal stories, historical artefacts and multimedia exhibits. The learning session lets you examine the impact of World War II on Britain, Europe and Asia, including the consequences for Singapore and the wider region. It also encourages you to discuss conflict, peacebuilding and Britain's continuing role in international affairs."], "Old Trafford": ["You will explore how one of the world's most recognised sports organisations combines elite performance, education, community outreach and commercial success. The stadium tour and museum show you how British football has evolved into a global industry that contributes significantly to the UK's economy, tourism and international influence.", "You will also examine how sport functions as a form of cultural diplomacy and strengthens Britain's global identity."], "Range Rover Factory, Solihull": ["You will gain first-hand insight into advanced manufacturing processes at one of the UK's leading automotive companies. You will observe how robotics, automation, artificial intelligence, precision engineering and quality control are integrated into modern vehicle production.", "The visit also introduces you to concepts such as sustainability, research and development, global supply chains and the importance of innovation in maintaining international competitiveness."], "Bletchley Park": ["You will explore the historic site where Allied codebreakers deciphered encrypted communications during the Second World War. Through interactive exhibits and a tailored learning session, you will discover how mathematics, cryptography, engineering and early computing contributed to intelligence gathering and helped shape the outcome of the war.", "You will learn about the pioneering work that laid the foundations for modern computer science and cybersecurity, while examining the ethical considerations surrounding intelligence and national security.", "The programme also encourages you to reflect on the importance of innovation, collaboration and problem-solving in addressing global challenges, and on how information and technology influence power, politics and global decision-making, both in the past and present."], "Oxford city walk": ["You will learn about Oxford's rich literary heritage, with connections to renowned authors such as J.R.R. Tolkien, C.S. Lewis, Lewis Carroll and Oscar Wilde, and see how the university and city have shaped English literature.", "The tour explains Oxford's distinctive collegiate education system and celebrates how Oxford has nurtured generations of influential leaders, writers, scientists and innovators."], "Ashmolean Museum": ["Through close examination of artefacts spanning over 3,000 years of Chinese civilisation, you will investigate the development of Chinese history, technology, philosophy and artistic traditions. The session also shows how British museums preserve, interpret and present world cultures, encouraging you to evaluate museums as centres for education, research and cross-cultural dialogue.", "You will develop historical inquiry skills by analysing primary sources and considering multiple perspectives on cultural heritage, collection practices and global interconnectedness. The experience also shows the UK's commitment to public education through its world-class museums."], "Magdalen College": ["Find out what you should consider when selecting a UK university for your undergraduate course of study. As you hear about your seniors' experiences with Oxford's collegiate system, consider the adaptations Singaporean students need to make in order to thrive in this environment."], "Browns Oxford": ["Find out what you should consider when selecting a UK university for your undergraduate course of study. As you hear about your seniors' experiences with Oxford's collegiate system, consider the adaptations Singaporean students need to make in order to thrive in this environment."], "Westminster Abbey": ["Through expert commentary, you will learn about the evolution of the monarchy, Parliament, religion and national identity, and how these institutions have influenced the development of governance, law and civic life in many Commonwealth countries, including Singapore."], "London City Tour": ["You will gain a broad introduction to London's historical and cultural landmarks while exploring how centuries of British history continue to shape modern Britain.", "Visits to iconic landmarks also give you opportunities to appreciate Britain's architectural heritage and how historic sites remain integral to contemporary society."], "UK Parliament": ["Through expert commentary, you will learn about the evolution of the monarchy, Parliament, religion and national identity, and how these institutions have influenced the development of governance, law and civic life in many Commonwealth countries, including Singapore."], "London Underground": ["The London Tube opened in 1863 and is the world's first underground railway. During WW2, London Underground stations also served as air raid shelters. Compare the cost, efficiency and commuter comfort of the public transport systems in London and Singapore."], "Churchill War Rooms": ["Follow up on your exploration of how WW2 influenced British culture and society, with enduring impacts on contemporary politics and economic development."], "Sustainable Architecture walk": ["Learn about the key principles behind sustainable building certification. Examine how London balances the preservation of historic landmarks with innovative architecture and sustainable city planning, gaining insights into Britain's commitment to environmental stewardship and liveable cities."], "Poetry workshop": ["A poet, educator and editor, Jacob's enthusiasm for using poetry as a tool for education and interaction has made him a renowned and inspirational figure in the poetry and educational communities."], "Old Chang Kee UK": ["Learn about the strategies used to expand into an overseas market."], "British Museum": ["Consider how the enormous collection of antiques from around the globe gives you insights into the UK's power and influence over the past few centuries.", "Discuss whether foreign nations with the means to conserve and study cultural treasures should be allowed to remove such artefacts from their original sites."], "Thames Barrier": ["Besides learning about the history of the barrier's development and construction, find out about the social, environmental and economic impacts of its use.", "Compare the functions of this structure with those of Singapore's Marina Barrage."], "\"Hamilton\", Victoria Palace Theatre": ["With an intentionally diverse cast bringing history to life using hip-hop, R&amp;B and rap music, alongside traditional musical theatre styles, watching \"Hamilton\" on the West End stage gives you a chance to think about how art and history connect, and how music and performance can make the past meaningful for us today."], "The Old Operating Theatre Museum": ["You will gain an appreciation of the role of hospitals, medical education and public health in improving quality of life. Compare Britain's medical advancements with the development of Singapore's healthcare system. The programme also develops your historical inquiry skills through the analysis of authentic artefacts, historical evidence and demonstrations of Victorian surgical practices."], "Musical Theatre Masterclass": ["Develop your appreciation of live theatre as an important aspect of Britain's cultural identity.", "You will explore how contemporary musical theatre reinterprets historical events for modern audiences. You will examine elements of performance, music, choreography and stagecraft, while analysing how the production blends traditional historical narratives with modern artistic forms."], "Singapore High Commission": ["Hear from the officials about Singapore's bilateral cooperation with the UK and why the UK is a valuable partner for Singapore, as well as the intricacies of maintaining cordial relations, and the experiences and challenges of Singaporeans living in the UK."]};
+const ABOUT_LABEL={"London Underground":"About the Tube","Poetry workshop":"About the poet","Old Chang Kee UK":"About Old Chang Kee UK","Browns Oxford":"About Browns Oxford","Musical Theatre Masterclass":"About the masterclass","Oxford city walk":"About the walk","Sustainable Architecture walk":"About the walk","Salford Quays and MediaCityUK":"About the Quays","Westfield London":"About Westfield"};
+const PLACE_ROWS={1:{2:[0],3:[1]},2:{1:[0]},3:{0:[0],2:[1]},4:{2:[0]},5:{1:[0]},6:{1:[0],2:[1]},7:{1:[0],2:[1]},8:{3:[0,1],4:[2]},9:{0:[0],1:[1],2:[2]},10:{1:[0],2:[1],3:[2],4:[3]},11:{1:[0],3:[1],4:[2]},12:{1:[0],2:[1],3:[2]},13:{1:[0],2:[1]}};
+const app=document.getElementById("app");
+const LEGS={man:{c:"#dc241f",t:"Manchester",s:"3 nights"},oxf:{c:"#0a3bb0",t:"Oxford",s:"4 nights"},lon:{c:"#00782a",t:"London",s:"5 nights"},home:{c:"#6950a1",t:"Homeward",s:"Flight home"}};
+const GCOL={B:{c:"#c8102e",f:"#fff"},J:{c:"#012169",f:"#fff"},P:{c:"#ffd329",f:"#0c1a44"}};
+const KCOL=["#c8102e","#00782a","#6950a1","#007d8a","#c75a00"];
+
+/* ---- artwork ---- */
+const unionJack=`<svg class="flag" viewBox="0 0 60 36" aria-hidden="true"><rect width="60" height="36" fill="#012169"/><path d="M0 0L60 36M60 0L0 36" stroke="#fff" stroke-width="7"/><path d="M0 0L60 36M60 0L0 36" stroke="#c8102e" stroke-width="3"/><path d="M30 0V36M0 18H60" stroke="#fff" stroke-width="11"/><path d="M30 0V36M0 18H60" stroke="#c8102e" stroke-width="6"/></svg>`;
+const guard=(x,cls="")=>`<g transform="translate(${x})"><g class="march ${cls}"><rect x="7" y="0" width="22" height="30" rx="10" fill="#14141a"/><rect x="11" y="27" width="14" height="12" fill="#f4c9a8"/><rect x="6" y="38" width="24" height="26" rx="3" fill="#c8102e"/><rect x="16.5" y="39" width="3" height="24" fill="#ffd329" opacity=".9"/><rect x="6" y="52" width="24" height="3" fill="#fff"/><rect x="8" y="64" width="9" height="16" fill="#14141a"/><rect x="19" y="64" width="9" height="16" fill="#14141a"/></g></g>`;
+const ART={
+ days:`<svg viewBox="0 0 270 74" aria-hidden="true"><rect x="0" y="62" width="270" height="6" fill="#012169"/><g class="minitrain"><rect x="4" y="38" width="62" height="20" rx="6" fill="#dc241f"/><rect x="11" y="43" width="11" height="8" fill="#fff"/><rect x="29" y="43" width="11" height="8" fill="#fff"/><rect x="47" y="43" width="11" height="8" fill="#fff"/><circle cx="17" cy="60" r="4" fill="#012169"/><circle cx="53" cy="60" r="4" fill="#012169"/></g><circle cx="226" cy="34" r="25" fill="#fff" stroke="#dc241f" stroke-width="10"/><rect x="186" y="26" width="80" height="16" fill="#012169"/><text x="226" y="38" text-anchor="middle" font-family="Cabin,sans-serif" font-size="11" font-weight="700" fill="#fff">14 DAYS</text></svg>`,
+ groups:`<svg viewBox="0 0 120 82" aria-hidden="true">${guard(0)}${guard(42,"m2")}${guard(84,"m3")}</svg>`,
+ klo:`<svg viewBox="0 0 90 74" aria-hidden="true"><path class="leaf" d="M45 14C33 5 16 5 4 10V66C16 61 33 61 45 70Z" fill="#fff"/><path d="M45 14C57 5 74 5 86 10V66C74 61 57 61 45 70Z" fill="#ffd329"/><path d="M12 22C22 19 30 20 38 25M12 34C22 31 30 32 38 37M12 46C22 43 30 44 38 49" stroke="#c8102e" stroke-width="3" fill="none"/><path d="M78 22C68 19 60 20 52 25M78 34C68 31 60 32 52 37M78 46C68 43 60 44 52 49" stroke="#012169" stroke-width="3" fill="none"/></svg>`,
+ flights:`<svg viewBox="0 0 100 74" aria-hidden="true"><g class="plane"><path d="M6 44L82 14C90 11 96 16 90 22L66 42L74 66L66 68L50 48L28 58L26 68L20 69L16 54Z" fill="#fff" stroke="#012169" stroke-width="3" stroke-linejoin="round"/><path d="M66 42L50 48" stroke="#c8102e" stroke-width="4"/></g></svg>`,
+ pack:`<svg viewBox="0 0 80 78" aria-hidden="true"><path class="drop" d="M12 8v7" stroke="#fff" stroke-width="3"/><path class="drop d2" d="M40 3v7" stroke="#fff" stroke-width="3"/><path class="drop d3" d="M68 8v7" stroke="#fff" stroke-width="3"/><path d="M6 44C8 26 24 18 40 18S72 26 74 44C68 38 62 38 57 44C52 38 46 38 40 44C34 38 28 38 23 44C18 38 12 38 6 44Z" fill="#ffd329"/><path d="M40 44V68C40 76 52 76 52 68" fill="none" stroke="#fff" stroke-width="4"/></svg>`,
+ money:`<svg viewBox="0 0 74 74" aria-hidden="true"><g class="coin"><circle cx="37" cy="37" r="33" fill="#f5b700" stroke="#fff" stroke-width="4"/><circle cx="37" cy="37" r="25" fill="none" stroke="#a87700" stroke-width="2"/><text x="37" y="50" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="36" fill="#0c1a44">£</text></g></svg>`,
+ rules:`<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#fff" stroke="#0c1a44" stroke-width="6"/><g fill="#0c1a44"><rect x="38" y="9" width="4" height="9"/><rect x="38" y="62" width="4" height="9"/><rect x="9" y="38" width="9" height="4"/><rect x="62" y="38" width="9" height="4"/></g><rect class="hand" x="38" y="16" width="4" height="26" rx="2" fill="#c8102e"/><rect class="hand h2" x="37" y="24" width="6" height="18" rx="3" fill="#0c1a44"/><circle cx="40" cy="40" r="4" fill="#0c1a44"/></svg>`,
+ contacts:`<svg viewBox="0 0 54 92" aria-hidden="true"><g class="ring"><path d="M4 16Q27 -6 50 16V88H4Z" fill="#dc241f"/><rect x="9" y="17" width="36" height="7" fill="#14141a"/><text x="27" y="23" text-anchor="middle" font-family="Cabin,sans-serif" font-size="5.4" font-weight="700" fill="#fff">TELEPHONE</text><g fill="#ffe99a" stroke="#a81a1a" stroke-width="2"><rect x="11" y="29" width="32" height="42"/></g><path d="M11 43H43M11 57H43M27 29V71" stroke="#a81a1a" stroke-width="2"/><rect x="9" y="75" width="36" height="9" fill="#a81a1a"/></g></svg>`
+};
+const scene=`<div class="scenebox"><div class="stage"><svg class="lay" viewBox="0 0 1200 340" aria-hidden="true">
+<!-- far skyline -->
+<g fill="#0a2f86"><path d="M1010 286L1046 40L1082 286Z"/><rect x="1090" y="150" width="40" height="136"/><rect x="1140" y="196" width="60" height="90"/><rect x="0" y="210" width="60" height="76"/><path d="M450 286V210C452 170 478 150 500 148V124H506V148C528 150 554 170 556 210V286Z"/><rect x="380" y="226" width="70" height="60"/><rect x="560" y="226" width="26" height="60"/></g>
+<!-- Tower Bridge -->
+<g fill="#1b47a6"><path d="M104 286V140L126 104L148 140V286Z"/><path d="M270 286V140L292 104L314 140V286Z"/><rect x="148" y="150" width="122" height="9"/><rect x="60" y="236" width="316" height="13"/><path d="M60 236Q84 200 104 192L110 200Q84 212 68 240ZM376 236Q352 200 314 192L308 200Q342 212 368 240Z"/></g>
+<g fill="#ffd329"><rect x="120" y="170" width="11" height="17"/><rect x="286" y="170" width="11" height="17"/><rect x="120" y="205" width="11" height="17"/></g>
+<!-- London Eye -->
+<g><path d="M860 150L815 286M860 150L905 286" stroke="#fff" stroke-width="7"/><circle cx="860" cy="150" r="11" fill="#dc241f"/></g>
+<!-- Parliament -->
+<g fill="#1b47a6"><rect x="630" y="206" width="170" height="80"/><path d="M630 206l9-20 9 20zM662 206l9-20 9 20zM694 206l9-20 9 20zM726 206l9-20 9 20zM758 206l9-20 9 20z"/><rect x="786" y="150" width="30" height="136"/><path d="M786 150l15-30 15 30z"/></g>
+<g fill="#ffd329"><rect x="644" y="226" width="9" height="17"/><rect x="676" y="226" width="9" height="17"/><rect x="708" y="226" width="9" height="17"/><rect x="740" y="226" width="9" height="17"/><rect x="772" y="226" width="9" height="17"/></g>
+<!-- Big Ben -->
+<g><path d="M601 0V26" stroke="#ffd329" stroke-width="3"/><path d="M575 80L601 20L627 80Z" fill="#ffd329"/><rect x="570" y="78" width="62" height="208" fill="#2a5bc4"/><rect x="564" y="78" width="74" height="9" fill="#ffd329"/><rect x="564" y="156" width="74" height="7" fill="#ffd329"/><circle cx="601" cy="122" r="26" fill="#fff" stroke="#ffd329" stroke-width="5"/><g id="bbH" style="transform-origin:601px 122px"><rect x="599" y="104" width="4" height="18" rx="2" fill="#012169"/></g><g id="bbM" style="transform-origin:601px 122px"><rect x="600" y="98" width="2.5" height="24" rx="1" fill="#c8102e"/></g><circle cx="601" cy="122" r="3" fill="#012169"/><g fill="#012169" opacity=".5"><rect x="580" y="176" width="9" height="86"/><rect x="597" y="176" width="9" height="86"/><rect x="613" y="176" width="9" height="86"/></g></g>
+<!-- road -->
+<rect y="286" width="1200" height="54" fill="#14141a"/>
+</svg><div class="sprite cl1"><svg class="cl" viewBox="0 20 120 50" aria-hidden="true"><g fill="#fff"><ellipse cx="60" cy="52" rx="60" ry="17"/><ellipse cx="34" cy="42" rx="28" ry="17"/><ellipse cx="78" cy="38" rx="32" ry="21"/></g></svg></div><div class="sprite cl2"><svg class="cl" viewBox="0 20 120 50" aria-hidden="true"><g fill="#fff"><ellipse cx="60" cy="52" rx="60" ry="17"/><ellipse cx="34" cy="42" rx="28" ry="17"/><ellipse cx="78" cy="38" rx="32" ry="21"/></g></svg></div><svg class="sprite eye" viewBox="730 20 260 260" aria-hidden="true"><g><circle cx="860" cy="150" r="118" fill="none" stroke="#fff" stroke-width="5"/><g stroke="#fff" stroke-width="1.5" opacity=".75"><path d="M742 150H978M860 32V268M777 67L943 233M943 67L777 233"/></g><g fill="#ffd329"><circle cx="860" cy="32" r="8"/><circle cx="943" cy="67" r="8"/><circle cx="978" cy="150" r="8"/><circle cx="943" cy="233" r="8"/><circle cx="860" cy="268" r="8"/><circle cx="777" cy="233" r="8"/><circle cx="742" cy="150" r="8"/><circle cx="777" cy="67" r="8"/></g></g></svg><svg class="sprite hub" viewBox="845 135 30 30" aria-hidden="true"><circle cx="860" cy="150" r="11" fill="#dc241f"/></svg><div class="dashes"></div><svg class="sprite cab" viewBox="-2 232 128 78" aria-hidden="true"><g><path d="M0 296V276Q2 262 18 262L34 244Q37 241 44 241H82Q90 241 94 248L104 262H116Q124 262 124 272V296Z" fill="#000" stroke="#fff" stroke-width="1.5"/><path d="M38 247L27 262H58V247ZM64 247V262H96L87 247Z" fill="#9fd8ef"/><rect x="66" y="235" width="18" height="6" fill="#ffd329"/><g class="wheel"><circle cx="26" cy="298" r="10" fill="#333" stroke="#fff" stroke-width="2"/><path d="M26 289v18" stroke="#fff" stroke-width="2"/></g><g class="wheel"><circle cx="98" cy="298" r="10" fill="#333" stroke="#fff" stroke-width="2"/><path d="M98 289v18" stroke="#fff" stroke-width="2"/></g></g>
+</svg><svg class="sprite bus" viewBox="-2 192 190 122" aria-hidden="true"><g><g><rect x="0" y="194" width="186" height="104" rx="9" fill="#dc241f"/><rect x="0" y="238" width="186" height="5" fill="#ffd329"/><g fill="#bfe7f7"><rect x="10" y="203" width="30" height="27" rx="2"/><rect x="46" y="203" width="30" height="27" rx="2"/><rect x="82" y="203" width="30" height="27" rx="2"/><rect x="118" y="203" width="30" height="27" rx="2"/><rect x="154" y="203" width="25" height="27" rx="2"/><rect x="46" y="249" width="30" height="24" rx="2"/><rect x="82" y="249" width="30" height="24" rx="2"/><rect x="118" y="249" width="30" height="24" rx="2"/><rect x="154" y="249" width="25" height="32" rx="2"/></g><rect x="10" y="249" width="30" height="42" fill="#14141a"/><text x="96" y="287" text-anchor="middle" font-family="Cabin,sans-serif" font-weight="700" font-size="11" fill="#fff">HCI BSP UK 2026</text><g class="wheel"><circle cx="36" cy="299" r="13" fill="#222" stroke="#ddd" stroke-width="3"/><path d="M36 288v22" stroke="#ddd" stroke-width="2"/></g><g class="wheel"><circle cx="152" cy="299" r="13" fill="#222" stroke="#ddd" stroke-width="3"/><path d="M152 288v22" stroke="#ddd" stroke-width="2"/></g></g></g>
+</svg></div></div>`;
+const minibear=`<svg viewBox="0 0 18 28" aria-hidden="true"><rect x="3" y="0" width="12" height="15" rx="5.5" fill="#14141a"/><rect x="5" y="14" width="8" height="5" fill="#f4c9a8"/><rect x="2" y="19" width="14" height="9" rx="1" fill="#c8102e"/></svg>`;
+const trainSvg=`<svg viewBox="0 0 52 22" aria-hidden="true"><rect x="0" y="0" width="52" height="17" rx="5" fill="#dc241f"/><rect x="6" y="4" width="10" height="7" fill="#fff"/><rect x="20" y="4" width="10" height="7" fill="#fff"/><rect x="34" y="4" width="10" height="7" fill="#fff"/><circle cx="11" cy="19" r="3" fill="#012169"/><circle cx="41" cy="19" r="3" fill="#012169"/></svg>`;
+
+/* ---- views ---- */
+const TILES=[
+ {id:"days",cls:"t-white w2",t:"Daily Itinerary & Reflection",d:"Pick a day for its schedule, places and reflection focus"},
+ {id:"groups",cls:"t-yellow w2",t:"Groups & Teachers",d:"Your group, your teacher-in-charge, your reflection days"},
+ {id:"klo",cls:"t-red",t:"Key Learning",d:"Five objectives and our learning tasks"},
+ {id:"flights",cls:"t-sky",t:"Flights & Hotels",d:"SQ flights, Premier Inns, rooms"},
+ {id:"pack",cls:"t-purple",t:"Weather & Packing",d:"Layers, baggage limits, checklist"},
+ {id:"money",cls:"t-green",t:"Money & Essentials",d:"UK ETA, pounds, time, phone, insurance"},
+ {id:"rules",cls:"t-pink w2",t:"Trip Expectations",d:"Punctual. Attentive. Polite."},
+ {id:"contacts",cls:"t-black w2",t:"Contacts",d:"School, tour agency, High Commission"}
+];
+const VIEW={
+ groups:{t:"Groups & Teachers",bg:"#ffd329",fg:"#0c1a44",sub:"Three groups, fourteen students. Tap a day to see what your group reflects on."},
+ days:{t:"Daily Itinerary & Reflection",bg:"#ffffff",fg:"#012169",sub:"Fourteen stops from Manchester to London. Pick a day."},
+ klo:{t:"Key Learning",bg:"#c8102e",fg:"#fff",sub:"What this trip is for, and what you do with it."},
+ flights:{t:"Flights & Hotels",bg:"#35b8ee",fg:"#0c1a44",sub:"Meet at Changi T3 Row 3, Friday 6 November, 11pm."},
+ pack:{t:"Weather & Packing",bg:"#6950a1",fg:"#fff",sub:"Late autumn to early winter. Layers are best."},
+ money:{t:"Money & Essentials",bg:"#00782a",fg:"#fff",sub:"Bring £50 in cash, and around £300 – £350 on YouTrip."},
+ rules:{t:"Trip Expectations",bg:"#f7b3c8",fg:"#0c1a44",sub:"You are an ambassador of Hwa Chong Institution and Singapore."},
+ contacts:{t:"Contacts",bg:"#14141a",fg:"#fff",sub:"Who to reach, and how."}
+};
+function ukDate(){try{return new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date())}catch(e){return ""}}
+function curDay(){const t=ukDate();return DAYS.find(d=>d.iso===t)}
+function countdown(){
+  const cur=curDay(); if(cur) return `<a class="badge hot" href="#day-${cur.n}">Today is Day ${cur.n}: open today's reflection</a>`;
+  const ms=new Date("2026-11-06T23:00:00+08:00")-new Date(); const d=Math.ceil(ms/864e5);
+  if(ms>0) return `<span class="badge hot">${d===1?"1 day":d+" days"} to go</span>`;
+  return "";
+}
+function homeView(){
+  return `<div class="hero"><div class="jack"></div>
+   <div class="wrap hero-text"><div>
+     <div class="eyebrow">Hwa Chong<span class="long"> Institution</span> · BSP</div>
+     <h1>BSP UK <span>Immersion</span> 2026</h1>
+     <p class="sub">Manchester · Oxford · London<span class="long"> · 14 days, 12 nights</span> · <span style="white-space:nowrap">7–20 Nov</span></p>
+   </div>${unionJack}</div>
+   <div class="wrap strip">${countdown()}<span class="badge" id="clocks">&nbsp;</span></div>
+   ${scene}</div>
+   <div class="wrap"><div class="tiles">${TILES.map((t,i)=>`<a class="tile ${t.cls}" style="--i:${i}" href="#${t.id}"><div><h2>${t.t.replace("&","&amp;")}</h2><p>${t.d}</p></div>${ART[t.id]}</a>`).join("")}</div></div>`;
+}
+function shell(id,inner){const v=VIEW[id];return `<div class="topbar"><div class="wrap"><a class="home-btn" href="#home">← Home</a><span class="where">${v.t.replace("&","&amp;")}</span></div></div>
+  <div class="vband enter" style="--bg:${v.bg};--fg:${v.fg}"><div class="wrap"><div><h1>${v.t.replace("&","&amp;")}</h1><p>${v.sub}</p></div>${ART[id]}</div></div>
+  <div class="wrap"><div class="vbody">${inner}</div></div>`}
+
+function groupsView(){
+  return shell("groups",`<div class="gp stag">${Object.entries(GROUPS).map(([k,g])=>`<article class="gcard" style="--c:${GCOL[k].c};--cf:${GCOL[k].f}"><header><div class="eyebrow">Teacher-in-charge</div><h2>${g.teacher}</h2></header>
+   <ul>${g.names.map(n=>`<li>${minibear}${n}</li>`).join("")}</ul>
+   <div class="gfoot"><div class="eyebrow">Reflection group on</div><div class="chips">${DAYS.filter(d=>d.g===k).map(d=>`<a class="chip" href="#day-${d.n}">Day ${d.n}</a>`).join("")}</div></div></article>`).join("")}</div>
+   <p class="note">Tour Manager Ms Irene Koh travels with the group throughout.</p>`);
+}
+function daysView(){
+  const cur=curDay();
+  const tile=(d)=>`<a class="dtile${cur&&cur.n===d.n?" now":""}" style="--leg:${LEGS[d.leg].c}" href="#day-${d.n}"><span class="round">${d.n}</span><span><b>${d.date}${cur&&cur.n===d.n?" · Today":""}</b><span class="hl">${d.hl}</span><em>${d.g?"Reflection: "+GROUPS[d.g].short+"'s group":"Everyone reflects"}</em></span></a>`;
+  const blk=(leg,list)=>`<div class="legblock" style="--leg:${LEGS[leg].c}"><div class="leghead"><i></i><h2>${LEGS[leg].t}</h2><small>${LEGS[leg].s}</small></div><div class="dgrid stag">${list.join("")}</div></div>`;
+  const zero=`<a class="dtile" style="--leg:#6950a1" href="#day-0"><span class="round">0</span><span><b>Fri 6 Nov</b><span class="hl">Meet at Changi T3 Row 3, 11pm</span></span></a>`;
+  const homeTiles=DAYS.filter(d=>d.leg==="home").map(tile);
+  return shell("days",`<div class="how"><div><b>1. Discuss with your group</b>Share your key takeaways and discuss them as a group each day.</div><div><b>2. Post a short blog reflection</b>Post your daily reflection on our Google Site, using the day's focus.</div></div>
+   <div class="legblock" style="--leg:#6950a1"><div class="leghead"><i></i><h2>Departure</h2></div><div class="dgrid">${zero}</div></div>
+   ${["man","oxf","lon"].map(l=>blk(l,DAYS.filter(d=>d.leg===l).map(tile))).join("")}
+   ${blk("home",homeTiles)}
+   <p class="note">Timings may change because of traffic or other unforeseen situations. Follow your teachers' and Tour Manager's latest instructions.</p>`);
+}
+function trainLeft(n){return n===0?"0%":((n-.5)/14*100)+"%"}
+function dayNav(n){return `<div class="tubeline"><div class="wrap"><div style="position:relative"><div class="train" id="train" style="left:${trainLeft(lastTrain)}">${trainSvg}</div><ol class="tl">${DAYS.map(d=>`<li style="--leg:${LEGS[d.leg].c}"${d.n===n?' class="cur"':""}><a href="#day-${d.n}" aria-label="Day ${d.n}, ${d.date}"${d.n===n?' aria-current="page"':""}><span class="st">${d.n}</span></a></li>`).join("")}</ol></div></div></div>`}
+function dayTop(label,date,place,color,cur){return `<div class="topbar"><div class="wrap"><a class="home-btn" href="#home">← Home</a><a class="home-btn" style="background:#fff" href="#days">All days</a><span class="where">${date}</span></div></div><div class="daytop enter" style="--leg:${color}"><div class="wrap"><div class="big-round"><b>${label}</b></div><div style="min-width:0"><h1>${place}</h1><p>${date}${cur?" · Today":""}</p></div></div></div>`}
+function dayView(n){
+  if(n===0){return dayTop("DAY 0","Fri 6 Nov","Singapore","#6950a1")+dayNav(0)+`<div class="wrap"><div class="vbody day-b" style="--leg:#6950a1"><section class="pane plan tabpane on"><h2>Itinerary</h2><ul class="tt"><li><time>2300h</time><span class="dot"></span><span>Meet your Tour Manager at Terminal 3 Row 3 and check in for your flight<em>Wear a long-sleeved top, jeans or pants, and covered-toe shoes</em></span></li></ul></section><div class="pager"><a class="none" href="#days">x</a><a class="all" href="#days">All days</a><a href="#day-1">Day 1 →</a></div></div></div>`}
+  const d=DAYS.find(x=>x.n===n); if(!d) return daysView();
+  const g=d.g?GROUPS[d.g]:null; const cur=curDay();
+  const meals=d.meals.replace(/<strong>(.*?)<\/strong>/,"<mark>$1</mark>");
+  const pls=PLACES[n]||[], rows=PLACE_ROWS[n]||{};
+  const tabs=[["plan","Itinerary"],["reflect","Reflection for the day"]];
+  const about=(p,multi)=>`<details class="about"><summary><span>${multi?p.n:(ABOUT_LABEL[p.n]||"About this place")}</span></summary><div class="about-b"><b class="kick">${p.k}</b><p>${p.i}</p>${LEARNING[p.n]?`<div class="lv"><h4>Learning value</h4>${LEARNING[p.n].map(x=>`<p>${x}</p>`).join("")}</div>`:""}<h4>Look out for</h4><ul>${p.l.map(x=>`<li>${x}</li>`).join("")}</ul></div></details>`;
+  const tab=tabs.some(t=>t[0]===dayTab)?dayTab:"plan";
+  const on=k=>k===tab?" on":"";
+  return dayTop("DAY "+d.n,d.date,d.place,LEGS[d.leg].c,cur&&cur.n===d.n)+dayNav(n)+`<div class="wrap"><div class="vbody day-b" style="--leg:${LEGS[d.leg].c}">
+    <div class="daytabs" role="tablist">${tabs.map(t=>`<button role="tab" data-tab="${t[0]}" aria-selected="${t[0]===tab}">${t[1]}</button>`).join("")}</div>
+    <div class="daypanes">
+    <section class="pane plan tabpane${on("plan")}" data-pane="plan"><h2>Itinerary</h2><ul class="tt">${d.sched.map((s,i)=>{const r=rows[i]||[];return `<li><time>${s[0]||""}</time><span class="dot"></span><div class="stop-b">${s[1]}${s[2]?`<em>${s[2]}</em>`:""}${r.map(k=>about(pls[k],r.length>1)).join("")}</div></li>`}).join("")}</ul>
+      <div class="meta"><span>${meals}</span>${d.stay?`<span><b>Tonight:</b> ${d.stay}</span>`:""}</div></section>
+    <section class="pane reflect tabpane${on("reflect")}" data-pane="reflect"><div class="eyebrow">Reflection focus</div><p class="focus">${d.focus}</p>
+      <ul class="prompts">${d.prompts.map((p,i)=>`<li style="--i:${i}"><span>${i+1}</span><span>${p}</span></li>`).join("")}</ul>
+      <div class="tags">${d.klo.map(k=>`<a class="tag" href="#klo" data-k="${k}" title="${KLO[k-1].replace(/"/g,"&quot;")}">KLO ${k}</a>`).join("")}</div>
+      <div class="steps">Discuss with your group, then post your short reflection on our Google Site.</div>
+      <div class="grpline">${g?`<b>Reflection group:</b> ${g.teacher}'s group (${g.names.join(", ")})`:`<b>All groups:</b> whole-trip reflection`}</div></section>
+    </div>
+    <div class="pager"><a href="#day-${n-1}">← Day ${n-1}</a><a class="all" href="#days">All days</a>${n<14?`<a href="#day-${n+1}">Day ${n+1} →</a>`:`<a class="none" href="#days">x</a>`}</div></div></div>`;
+}
+function kloView(){
+  return shell("klo",`<div class="k stag">${KLO.map((t,i)=>`<article class="kcard" id="k${i+1}" style="--c:${KCOL[i]}"><div class="num">${i+1}</div><div><p>${t}</p><div class="chips">${DAYS.filter(d=>d.klo.includes(i+1)).map(d=>`<a class="chip" href="#day-${d.n}">Day ${d.n}</a>`).join("")}</div></div></article>`).join("")}</div>
+  <div class="tasks stag"><div class="task" style="--c:#35b8ee"><h3>Before the trip</h3><ul><li>Respond to your peers by <mark>5 November</mark>: comment on at least 3 other peers' discussion questions.</li></ul></div>
+  <div class="task" style="--c:#00782a"><h3>During the trip</h3><ul><li>Share key takeaways and discuss as a group each day.</li><li>Post your daily reflections on our Google Site.</li></ul></div>
+  <div class="task" style="--c:#e8710a"><h3>After the trip</h3><ul><li>Group presentation in <mark>January 2027</mark>, on our key learning objectives, to peers and juniors.</li></ul></div></div>`);
+}
+function flightsView(){
+  return shell("flights",`<section class="card stag" style="--c:#dc241f"><h2>Singapore Airlines</h2><div class="tbl"><table><thead><tr><th>Date</th><th>Flight</th><th>Route</th><th>Depart / arrive</th><th>Time</th></tr></thead><tbody>
+   <tr><td>Sat 7 Nov</td><td><b>SQ 302</b></td><td>Singapore T3 – Manchester T2</td><td>0210h / 0835h</td><td>14h 25min</td></tr>
+   <tr><td>Thu 19 Nov</td><td><b>SQ 319</b></td><td>London Heathrow T2 – Singapore</td><td>2035h / 1745h next day</td><td>13h 10min</td></tr></tbody></table></div>
+   <p class="note">Check-in: Terminal 3 Row 3 (area between the main entrance and the counters), 11pm on Friday 6 Nov. The Singapore arrival terminal is assigned about 2h before landing, so check the Changi App or <a href="https://www.changiairport.com/en/flights/arrivals.html">Changi flight arrivals</a>.</p></section>
+   <section class="card" style="--c:#6950a1"><h2>Premier Inn</h2><div class="tbl"><table><thead><tr><th>Nights</th><th>In – out</th><th>Hotel</th><th>Phone</th></tr></thead><tbody>
+   <tr><td>3N</td><td>7 – 10 Nov</td><td><b>Manchester Salford Media City</b><br>Blue, Media City UK, Salford, M50 2AB</td><td>+44 333 234 6548</td></tr>
+   <tr><td>4N</td><td>10 – 14 Nov</td><td><b>Oxford Cowley</b><br>Oxford Business Park, Garsington Road, Oxford, OX4 2JT</td><td>+44 333 321 1384</td></tr>
+   <tr><td>5N</td><td>14 – 19 Nov</td><td><b>London Hammersmith (Talgarth Road)</b><br>181 Talgarth Road, Hammersmith, London, W6 8DN</td><td>+44 333 034 6630</td></tr></tbody></table></div>
+   <p class="note">Free WiFi, tea and coffee making facilities, hairdryer, all-you-can-eat breakfast. <mark>No laundry facilities.</mark></p></section>
+   <section class="card" style="--c:#ffd329"><h2>Rooms</h2><div class="rooms">${ROOMS.map(r=>`<div><b>${r[0]}</b>${r[1].join("<br>")}</div>`).join("")}</div></section>`);
+}
+function packView(){
+  return shell("pack",`<div class="cols"><section class="card" style="--c:#35b8ee"><h2>Weather</h2><ul><li><mark>2–13°C</mark>, average 6–9°C. It could drop to 1°C.</li><li>Sunrise about 7.15am, sunset about 4.15pm.</li><li>Bring a foldable umbrella.</li></ul></section>
+  <section class="card" style="--c:#dc241f"><h2>Baggage</h2><ul><li>1 check-in suitcase, 25kg limit. Keep it <mark>under 20kg when leaving Singapore</mark>. Lock it and label it.</li><li>1 carry-on backpack, under 7kg, plus a small crossbody bag.</li><li>Hand-carry liquids: containers up to 100ml, in one clear re-sealable bag of up to 1L. No sharp objects.</li><li>Power banks: hand-carry only, up to 2, each up to 100Wh (≤25,000mAh). Do not use them during the flight.</li></ul></section></div>
+  <section class="card" style="--c:#6950a1"><h2>At least 3 layers</h2><div class="layers stag"><div style="--c:#c8102e"><b>Layer 1</b>Thermal innerwear</div><div style="--c:#012169"><b>Layer 2</b>Sweater or fleece</div><div style="--c:#00782a"><b>Layer 3</b>Hooded, waterproof jacket</div></div><p>A windbreaker is <mark>not sufficient</mark>. Wear comfortable, water-resistant covered shoes, preferably not new, with sports socks. Canvas shoes are not recommended.</p></section>
+  <div class="packs">
+   <section class="card" style="--c:#c8102e"><h2>Attire</h2><ul><li>1–2 jackets, hooded and waterproof (1 in hand-carry for arrival)</li><li>2–3 sweaters or fleece tops</li><li>4–5 long-sleeved tops</li><li>2–3 jeans or pants</li><li>2–3 sets of thermal innerwear</li><li>Sleepwear, undergarments, socks</li><li>Covered sneakers or boots</li><li>Slippers (optional, hotel room only)</li><li>Gloves, scarf, beanie</li></ul></section>
+   <section class="card" style="--c:#35b8ee"><h2>Toiletries</h2><ul><li>Comb, toothbrush, toothpaste, shaver</li><li>Contact lenses, solution and case, spare glasses or lenses</li><li>Moisturiser, lip balm</li><li>Shampoo, shower gel, facial wash, deodorant</li><li>Tissue, wet wipes, hand sanitiser, laundry detergent</li></ul></section>
+   <section class="card" style="--c:#ffd329"><h2>Documents & study</h2><ul><li>Passport, signed, with an approved UK ETA</li><li>YouTrip card with around £300 – £350, plus £50 in cash</li><li>Backpack and small crossbody bag</li><li>Writing material for the poetry workshop</li><li>Trip Workbook</li></ul></section>
+   <section class="card" style="--c:#00782a"><h2>Others</h2><ul><li>Empty water bottle, to refill for the flight</li><li>Reusable bag; foldable umbrella or raincoat</li><li>Phone, charger, power bank</li><li>Multi-way plug (1 per room)</li><li>Zip lock bags for dirty clothes</li><li>Labelled medication for headache, fever, flu, diarrhoea, motion sickness. Teachers and Tour Managers cannot dispense medication.</li><li>Thermometer and at least 20 masks</li><li>Vitamin C, throat soothers, heat packs (recommended)</li></ul></section>
+  </div>`);
+}
+function moneyView(){
+  return shell("money",`<div class="cols">
+   <section class="card" style="--c:#f5b700"><h2>Money</h2><p>£1 ≈ S$1.70. Bring <mark>£50 in cash</mark>, changed in Singapore, and load <mark>around £300 – £350 on YouTrip</mark>. Only polymer notes are accepted.</p><ul><li>8 lunches at £15 per meal: £120</li><li>3 days of Tube fare at £8.90 max per day: £27</li><li>Snacks and drinks: £5 per day</li><li>Souvenirs and shopping: £50 – £100</li></ul><p class="note">The lunch and Tube amounts have been offset from the overall package price (SGD 245).</p></section>
+   <section class="card" style="--c:#35b8ee"><h2>Time, water, power</h2><ul><li>The UK is <mark>8 hours behind Singapore</mark>: 9am in the UK is 5pm in Singapore.</li><li>Best time to contact home: about 8am UK time, 4pm in Singapore. Parents are asked not to contact students during the day except in emergencies.</li><li>Tap water is potable. Pre-boiling is advised, and each room has a kettle. Bottled water is provided daily (2 × 500ml).</li><li>No travel adaptor needed. Bring one multi-way plug per room.</li></ul></section>
+   <section class="card" style="--c:#c8102e"><h2>Passport & entry</h2><ul><li>Valid for at least 6 months from arrival, and signed. No visa needed for Singaporeans.</li><li><mark>You must have an approved UK ETA (Electronic Travel Authorisation) before you board.</mark> Without one, you will be denied boarding.</li><li>Apply on the official UK ETA app or at <a href="https://apply-for-an-eta.homeoffice.gov.uk">apply-for-an-eta.homeoffice.gov.uk</a>. It costs £20 per person. Avoid other websites, as some charge much more.</li><li>You need your passport and a photo of yourself. Most decisions come within minutes, but allow up to 3 working days.</li><li>The ETA is linked to your passport and lasts 2 years, or until the passport expires. If you get a new passport, you must apply again.</li><li>Not on a Singapore passport? Check the UK entry rules for your own passport.</li><li>Biometric passport holders can use the eGates.</li><li>Do not bring meat, dairy, fish or animal products, fruit, vegetables, nuts or seeds into Great Britain.</li></ul></section>
+   <section class="card" style="--c:#6950a1"><h2>Phone & insurance</h2><ul><li>Check your roaming plan with your telco, or buy an eSIM before you go.</li><li>Travel insurance: Income Insurance, MOE Student Plan.</li><li><mark>Keep your boarding passes</mark>, as all claims need them.</li><li>Claims for loss need a police report within 24 hours. <a href="https://onlinetravelclaim.income.com.sg/travel-claim-web/travel">Claims website</a></li></ul></section>
+  </div><p class="note"><a href="https://drive.google.com/file/d/1mdl35sj31-eoekAjcBvCTUH3qZe83q6O/view?usp=sharing">Open the Trip Booklet</a></p>`);
+}
+function rulesView(){
+  return shell("rules",`<div class="words stag"><div class="word" style="--c:#c8102e">Punctual</div><div class="word" style="--c:#012169">Attentive</div><div class="word" style="--c:#00782a">Polite</div></div>
+  <div class="cols"><section class="card" style="--c:#c8102e"><h2>Always be punctual</h2><p><mark>"On time is late."</mark> Observe all reporting times.</p></section>
+  <section class="card" style="--c:#012169"><h2>Be attentive</h2><ul><li>Follow instructions from Teachers, the Tour Manager and Guides.</li><li>Keep your valuables with you.</li><li>Look out for one another at all times.</li><li>Stay with the group unless your teacher has given special permission.</li></ul></section>
+  <section class="card" style="--c:#00782a"><h2>Be respectful and considerate</h2><ul><li>Be mindful of your surroundings and noise level.</li><li>No littering, loud talking or rude language.</li><li>Do not pass offensive remarks or judge issues you do not understand.</li></ul></section>
+  <section class="card" style="--c:#6950a1"><h2>In the hotel and in your bag</h2><ul><li>Stay only in your allocated room, with your designated roommate.</li><li>Do not visit other students' rooms without a teacher's supervision.</li><li>Cards and games are not allowed. Do not bring unnecessary valuables.</li></ul></section></div>`);
+}
+function contactsView(){
+  return shell("contacts",`<div class="booths stag">
+  <section class="booth" style="--c:#c8102e"><h2>Hwa Chong Institution</h2><p>General Office: 6468 3955<br>Ms Low Yen Yen, Head, Bicultural Studies Programme: lowyy@hci.edu.sg<br>Mr Bok Zhong Ming: bokzm@hci.edu.sg</p></section>
+  <section class="booth" style="--c:#012169"><h2>Pegasus Travel Management</h2><p>Tour Manager: Ms Irene Koh<br>Ms Janice Soh (not travelling with the group): 9687 0800<br>janice.soh@pegasustravel.com.sg</p></section>
+  <section class="booth" style="--c:#ffd329;--cf:#0c1a44"><h2>Ministry of Foreign Affairs</h2><p>Singapore hotline (24h): 6379 8000</p></section>
+  <section class="booth" style="--c:#00782a"><h2>High Commission of Singapore, London</h2><p>9 Wilton Crescent, Belgravia, London, SW1X 8SP<br>Tel: +44 20 7235 8315 (Mon–Fri, 9am–1pm, 2pm–5pm)<br>After-hours emergency: +44 77 1034 8335<br>singhc_lon@mfa.sg</p></section></div>`);
+}
+
+/* ---- router ---- */
+let lastTrain=1, clockTimer=null;
+const RENDER={groups:groupsView,days:daysView,klo:kloView,flights:flightsView,pack:packView,money:moneyView,rules:rulesView,contacts:contactsView};
+function tickClocks(){
+  try{
+    const now=new Date();
+    const fmt=z=>new Intl.DateTimeFormat("en-GB",{timeZone:z,hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(now);
+    const c=document.getElementById("clocks"); if(c) c.textContent=`London ${fmt("Europe/London")} · Singapore ${fmt("Asia/Singapore")}`;
+    const [h,m]=fmt("Europe/London").split(":").map(Number);
+    const H=document.getElementById("bbH"),M=document.getElementById("bbM");
+    if(H&&M){H.style.transform=`rotate(${(h%12)*30+m/2}deg)`;M.style.transform=`rotate(${m*6}deg)`;}
+  }catch(e){}
+}
+const saved={};let curRoute=null,seen={};
+let dayTab="plan";try{dayTab=localStorage.getItem("bspDayTab")||"plan"}catch(e){}
+function route(){
+  const name=(location.hash||"#home").slice(1);
+  if(curRoute==="home"||curRoute==="days")saved[curRoute]=window.scrollY;
+  const dm=name.match(/^day-(\d+)$/);
+  let html,key=name;
+  if(dm&&+dm[1]<=14){html=dayView(+dm[1]);}
+  else if(RENDER[name]){html=RENDER[name]();}
+  else {html=homeView();key="home";}
+  const revisit=!!seen[key]; seen[key]=1;
+  document.body.classList.toggle("inner",key!=="home");
+  app.classList.toggle("noanim",revisit&&(key==="home"||key==="days"));
+  app.innerHTML=html;
+  curRoute=key;
+  window.scrollTo(0,saved[key]||0);
+  if(dm&&+dm[1]<=14){const t=document.getElementById("train"),n=+dm[1];lastTrain=n;requestAnimationFrame(()=>requestAnimationFrame(()=>{if(t)t.style.left=trainLeft(n)}));}
+  if(pendingK){const el=document.getElementById("k"+pendingK);pendingK=null;if(el){el.classList.add("flash");el.scrollIntoView({block:"center"});}}
+  tickClocks();
+}
+/* day tabs on phones */
+document.addEventListener("click",e=>{
+  const b=e.target.closest&&e.target.closest(".daytabs button");if(!b)return;
+  dayTab=b.dataset.tab;try{localStorage.setItem("bspDayTab",dayTab)}catch(err){}
+  document.querySelectorAll(".daytabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  document.querySelectorAll("[data-pane]").forEach(p=>p.classList.toggle("on",p.dataset.pane===dayTab));
+  const bar=document.querySelector(".daytabs");
+  if(bar){const y=bar.parentElement.getBoundingClientRect().top+window.scrollY-54;if(window.scrollY>y)window.scrollTo(0,y);}
+});
+/* swipe between days */
+let sx=0,sy=0,sOk=false;
+document.addEventListener("touchstart",e=>{const t=e.touches[0];sx=t.clientX;sy=t.clientY;sOk=t.clientX>24&&t.clientX<window.innerWidth-24;},{passive:true});
+document.addEventListener("touchend",e=>{
+  if(!sOk)return;const m=(location.hash||"").match(/^#day-(\d+)$/);if(!m)return;
+  const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+  if(Math.abs(dx)<70||Math.abs(dy)>45)return;
+  const n=+m[1]+(dx<0?1:-1);if(n>=0&&n<=14)location.hash="#day-"+n;
+},{passive:true});
+let pendingK=null;
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a[href^='#']");if(!a)return;if(a.dataset.k)pendingK=a.dataset.k;const h=a.getAttribute("href");if(h===(location.hash||"#home")){e.preventDefault();route();}});
+window.addEventListener("hashchange",route);
+clockTimer=setInterval(tickClocks,20000);
+route();
+</script>
+
+</body></html>
